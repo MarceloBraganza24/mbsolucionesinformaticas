@@ -1,15 +1,18 @@
 .headerContainer {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/fondoHome.jpg');
     background-image: url('../img/luna_eclipse.jpg');
-    background-size: cover;
+    position: relative;
+    &__headerMobile {
+        display: none;
+    }
     &__header {
-        //background-color: cadetblue;
         width: 100%;
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: fixed;
+        transition: top 0.5s ease-in-out;
         &__logoContainer {
             width: 100%;
             height: auto;
@@ -58,7 +61,7 @@
         width: 100%;
         height: auto;
         @include disFC();
-        padding: 25vh 0vh 0vh 0vh;
+        padding: 45vh 0vh 0vh 0vh;
         &__phraseContainer {
             background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
@@ -71,12 +74,142 @@
                 font-size: 60px;
                 -webkit-text-stroke: 3px white;
                 font-weight: bold;
-                opacity: 0;
-                transform: translateY(50px);
-                animation-duration: 1s; /* Duración de la animación */
-                animation-fill-mode: forwards; /* Mantener el estado final después de la animación */
-                animation-timing-function: ease-out;
             }
         }
     }
+    &__separatorHomeContainer {
+        width: 100%;
+        height: auto;
+        @include disFC();
+        position: absolute;
+        bottom: 0;
+        &__separatorHome {
+            background-color: #ccc;
+            width: 40%;
+            height: 2vh;
+            border-top-right-radius: 20vh;
+            border-top-left-radius: 20vh;
+        }
+    }
+}
+
+.menuOptionsContainer {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .headerContainer {
+        width: 100%;
+        height: 100vh;
+        background-image: url('../img/luna_eclipse_V.jpg');
+        background-size: cover;
+        &__header {
+            display: none;
+        }
+        &__headerMobile {
+            //background-color: rgb(0, 0, 0, 0.8);
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            color: white;
+            //border-bottom-left-radius: 20%;
+            position: fixed;
+            z-index: 1;
+            transition: top 0.5s ease-in-out;
+            &__logoContainer {
+                width: 100%;
+                height: auto;
+                @include disFC;
+                grid-column: 2/3;
+                &__logo {
+                    width: 80%;
+                }
+            }
+            &__menu {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                color: white;
+                gap: 1vh;
+                &__linea {
+                    width: 30%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1vh;
+                    &__prop {
+                        background-color: white;
+                        width: 100%;
+                        height: 0.8vh;
+                        border-radius: 1vh;
+                    }
+                }
+            }
+        }
+        &__homeContainer {
+            width: 100%;
+            height: auto;
+            @include disFC();
+            padding: 45vh 0vh 0vh 0vh;
+            &__phraseContainer {
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                height: auto;
+                @include disFC();
+                padding: 2vh 0vh;
+                &__phrase {
+                    width: 85%;
+                    color: rgb(255, 255, 255);
+                    font-size: 30px;
+                    -webkit-text-stroke: 2px white;
+                    font-weight: bold;
+                    letter-spacing: 0.2vh;
+                }
+            }
+        }
+        &__separatorHomeContainer {
+            width: 100%;
+            height: auto;
+            @include disFC();
+            position: absolute;
+            bottom: 0;
+            &__separatorHome {
+                background-color: #ccc;
+                width: 60%;
+                height: 2vh;
+                border-top-right-radius: 20vh;
+                border-top-left-radius: 20vh;
+            }
+        }
+    }
+
+.menuOptionsContainer {
+    background-color: rgb(0, 0, 0, 0.95);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: none;
+    margin-top: 16vh;
+    border-top-left-radius: 20%;
+    &__menuOptions {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        padding: 4vh 0vh 2vh 0vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        &__item {
+            color: white;
+            letter-spacing: 0.5vh;
+            font-size: 16px;
+            gap: 1vh;
+            padding-left: 2vh;
+        }
+    }
+}
 }

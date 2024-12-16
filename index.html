@@ -10,9 +10,11 @@
 </head>
 <body>
 
+    
     <header class="headerContainer">
+        
 
-        <div class="headerContainer__header">
+        <div id="header" class="headerContainer__header">
 
             <div class="headerContainer__header__logoContainer">
                 <img class="headerContainer__header__logoContainer__logo" src="img/logoMBsolucionesinformaticaspng.png" alt="logo_mb_soluciones_informaticas">
@@ -23,13 +25,13 @@
                 <div class="headerContainer__header__menuContainer__menu">
 
                     <div class="headerContainer__header__menuContainer__menu__item">
-                        <div class="headerContainer__header__menuContainer__menu__item__prop">HOME</div>
+                        <div id="btnHomeHeader" class="headerContainer__header__menuContainer__menu__item__prop">HOME</div>
                     </div>
                     <div class="headerContainer__header__menuContainer__menu__item">
-                        <div class="headerContainer__header__menuContainer__menu__item__prop">SERVICIOS</div>
+                        <div id="btnServicesHeader" class="headerContainer__header__menuContainer__menu__item__prop">SERVICIOS</div>
                     </div>
                     <div class="headerContainer__header__menuContainer__menu__item">
-                        <div class="headerContainer__header__menuContainer__menu__item__prop">CONTACTO</div>
+                        <div id="btnContactHeader" class="headerContainer__header__menuContainer__menu__item__prop">CONTACTO</div>
                     </div>
 
                 </div>
@@ -38,181 +40,286 @@
 
         </div>
 
-        <div class="headerContainer__homeContainer">
+        <div id="headerMobile" class="headerContainer__headerMobile">
 
-            <div class="headerContainer__homeContainer__phraseContainer">
-                <div class="headerContainer__homeContainer__phraseContainer__phrase animacion-1">"LLEVAMOS TU NEGOCIO AL SIGUIENTE NIVEL CON SOLUCIONES TECNOLÓGICAS PERSONALIZADAS Y EFECTIVAS"</div>
+            <div class="headerContainer__headerMobile__logoContainer">
+                <img class="headerContainer__headerMobile__logoContainer__logo" src="img/logoMBsolucionesinformaticaspng.png" alt="logomb">
+            </div>
+            <div class="headerContainer__headerMobile__menu">
+                <div id="hmenu" class="headerContainer__headerMobile__menu__linea">
+                    <div class="headerContainer__headerMobile__menu__linea__prop"></div>
+                    <div class="headerContainer__headerMobile__menu__linea__prop"></div>
+                    <div class="headerContainer__headerMobile__menu__linea__prop"></div>
+                </div>
             </div>
 
         </div>
 
+        <div id="menuOptionsContainer" class="menuOptionsContainer">
+
+            <div class="menuOptionsContainer__menuOptions">
+                <div id="btnHomeHeaderMobile" class="menuOptionsContainer__menuOptions__item">- HOME</div>
+                <div id="btnServicesHeaderMobile" class="menuOptionsContainer__menuOptions__item">- SERVICIOS</div>
+                <div id="btnContactHeaderMobile" class="menuOptionsContainer__menuOptions__item">- CONTACTO</div>
+            </div>
+
+        </div>
+
+        
+        <div class="headerContainer__homeContainer">
+            
+            <div class="headerContainer__homeContainer__phraseContainer">
+                <div class="headerContainer__homeContainer__phraseContainer__phrase animacion-1">"LLEVAMOS TU NEGOCIO AL SIGUIENTE NIVEL CON SOLUCIONES TECNOLÓGICAS PERSONALIZADAS Y EFECTIVAS"</div>
+            </div>
+            
+        </div>
+        
+        <div class="headerContainer__separatorHomeContainer">
+            <div class="headerContainer__separatorHomeContainer__separatorHome"></div>
+        </div>
+        
     </header>
 
     <main class="mainContainer">
 
-        <div class="mainContainer__services">
+        <div class="mainContainer__separatorContainer">
+            <div class="mainContainer__separatorContainer__separatorService"></div>
+        </div>
+
+        <div id="servicesSection" class="mainContainer__services">
             
             <div class="mainContainer__services__title">
                 <h2 class="mainContainer__services__title__prop">~ SERVICIOS Y BENEFICIOS ~</h2>
             </div>
 
-            <div class="mainContainer__services__carouselsContainer">
+            <div class="mainContainer__services__cardsContainer">
 
-                
+                <div class="mainContainer__services__cardsContainer__cardContainer">
 
-                <!-- <div class="mainContainer__services__carouselsContainer__carouselContainer">
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
 
-                    <div class="carousel">
-
-                        <div class="slides">
-                            <div class="slide">
-                                <img class="slide__img" src="img/diseño_pagina_web.png" alt="">
-                                <div class="slide__title">Diseño de páginas web</div>
-                                <p class="slide__descr">Combina creatividad, funcionalidad y usabilidad para ofrecer experiencias digitales atractivas y efectivas que se adapten a las necesidades del usuario</p>
-                            </div>
-                            <div class="slide">
-                                <img class="slide__img" src="img/diseño_pagina_web.png" alt="">
-                                <h3 class="slide__title">Diseño de aplicaciones web</h3>
-                                <p class="slide__descr">Un buen diseño de aplicaciones web equilibra estética y usabilidad, adaptándose a las necesidades del usuario y las tendencias tecnológicas actuales</p>
-                            </div>
-                            <div class="slide">
-                                <img class="slide__img" src="img/diseño_pagina_web.png" alt="">
-                                <h3 class="slide__title">Instalación de Windows 7/10/11</h3>
-                                <p class="slide__descr">requiere preparar correctamente el dispositivo, asegurarse de contar con una licencia válida y seguir los pasos para configurar el sistema operativo de manera óptima</p>
-                            </div>
-                            <div class="slide">
-                                <img class="slide__img" src="img/diseño_pagina_web.png" alt="">
-                                <h3 class="slide__title" style="font-size: 25px; font-weight: bold;">Paquete Adobe(Photoshop, Ilustrator, etc)</h3>
-                                <p class="slide__descr">El paquete Adobe, que incluye herramientas como Photoshop, Illustrator y otras aplicaciones, ofrece un conjunto completo de soluciones para el diseño gráfico, la edición de imágenes y la creación de contenido digital de alta calidad</p>
-                            </div>
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
                         </div>
-                        <div class="carousel-controls">
-                            <button class="control prev">&lt;</button>
-                            <button class="control next">&gt;</button>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Diseño de páginas web</div>
                         </div>
-                        <div class="indicators">
-                            <div class="indicator active"></div>
-                            <div class="indicator"></div>
-                            <div class="indicator"></div>
-                            <div class="indicator"></div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">Combina creatividad, funcionalidad y usabilidad para ofrecer experiencias digitales atractivas y efectivas que se adapten a las necesidades del usuario</div>
                         </div>
 
                     </div>
 
                 </div>
 
-                <div class="mainContainer__services__carouselsContainer__carouselContainer">
+                <div class="mainContainer__services__cardsContainer__cardContainer">
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
 
-                    <div class="carousel1">
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
+                        </div>
 
-                        <div class="slides1">
-                            <div class="slide1">
-                                <img class="slide1__img" src="img/diseño_pagina_web.png" alt="">
-                                <h3 class="slide1__title">Instalación de Paquete OFFICE</h3>
-                                <p class="slide1__descr">La instalación del paquete Office permite acceder a aplicaciones esenciales como Word, Excel y PowerPoint, proporcionando herramientas poderosas para la productividad personal y profesional</p>
-                            </div>
-                            <div class="slide1">
-                                <img class="slide1__img" src="img/diseño_pagina_web.png" alt="">
-                                <h3 class="slide1__title">Instalación de programas</h3>
-                                <p class="slide1__descr">La instalación de programas es un proceso fundamental para configurar y personalizar un dispositivo, asegurando que las herramientas necesarias estén disponibles para realizar tareas específicas</p>
-                            </div>
-                            <div class="slide1">
-                                <img class="slide1__img" src="img/diseño_pagina_web.png" alt="">
-                                <h3 class="slide1__title">Servicio técnico de PC</h3>
-                                <p class="slide1__descr">El servicio técnico de PC es esencial para garantizar el funcionamiento óptimo de los equipos, ofreciendo soluciones a problemas de hardware, software y mantenimiento preventivo</p>
-                            </div>
-                            <div class="slide1">
-                                <img class="slide1__img" src="img/diseño_pagina_web.png" alt="">
-                                <h3 class="slide1__title">Backup</h3>
-                                <p class="slide1__descr">Realizar un backup regularmente es crucial para proteger los datos importantes, garantizando su recuperación en caso de fallos del sistema, pérdidas accidentales o ataques cibernéticos</p>
-                            </div>
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Diseño de aplicaciones web</div>
                         </div>
-                        <div class="carousel-controls1">
-                            <button class="control1 prev1">&lt;</button>
-                            <button class="control1 next1">&gt;</button>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">Un buen diseño de aplicaciones web equilibra estética y usabilidad, adaptándose a las necesidades del usuario y las tendencias tecnológicas actuales</div>
                         </div>
-                        <div class="indicators1">
-                            <div class="indicator1 active1"></div>
-                            <div class="indicator1"></div>
-                            <div class="indicator1"></div>
-                            <div class="indicator1"></div>
+
+                    </div>
+                </div>
+
+                <div class="mainContainer__services__cardsContainer__cardContainer">
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Instalación de Windows 7/10/11</div>
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">Requiere preparar correctamente el dispositivo, asegurarse de contar con una licencia válida y seguir los pasos para configurar el sistema operativo de manera óptimarequiere preparar correctamente el dispositivo, asegurarse de contar con una licencia válida y seguir los pasos para configurar el sistema operativo de manera óptima</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mainContainer__services__cardsContainer__cardContainer">
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Paquete Adobe(Photoshop, Ilustrator, etc)</div>
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">El paquete Adobe, que incluye herramientas como Photoshop, Illustrator y otras aplicaciones, ofrece un conjunto completo de soluciones para el diseño gráfico, la edición de imágenes y la creación de contenido digital de alta calidad</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mainContainer__services__cardsContainer">
+
+                <div class="mainContainer__services__cardsContainer__cardContainer">
+
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Instalación de Paquete OFFICE</div>
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">La instalación del paquete Office permite acceder a aplicaciones esenciales como Word, Excel y PowerPoint, proporcionando herramientas poderosas para la productividad personal y profesional</div>
                         </div>
 
                     </div>
 
-                </div> -->
+                </div>
+
+                <div class="mainContainer__services__cardsContainer__cardContainer">
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Instalación de programas</div>
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">La instalación de programas es un proceso fundamental para configurar y personalizar un dispositivo, asegurando que las herramientas necesarias estén disponibles para realizar tareas específicas</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mainContainer__services__cardsContainer__cardContainer">
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Servicio técnico de PC</div>
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">El servicio técnico de PC es esencial para garantizar el funcionamiento óptimo de los equipos, ofreciendo soluciones a problemas de hardware, software y mantenimiento preventivo</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mainContainer__services__cardsContainer__cardContainer">
+                    <div class="mainContainer__services__cardsContainer__cardContainer__card">
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer">
+                            <img class="mainContainer__services__cardsContainer__cardContainer__card__imgContainer__img" src="img/diseño_pagina_web.png" alt="diseñoweb">
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__titleContainer__title">Backup</div>
+                        </div>
+
+                        <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer">
+                            <div class="mainContainer__services__cardsContainer__cardContainer__card__descrContainer__descr">Realizar un backup regularmente es crucial para proteger los datos importantes, garantizando su recuperación en caso de fallos del sistema, pérdidas accidentales o ataques cibernéticos</div>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
             
-            
-            
+        </div>
 
-            
+        <div id="contactSection" class="mainContainer__contactContainer">
 
-           
-            
-            <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
+            <div class="mainContainer__contactContainer__titleContainer">
+
+                <div class="mainContainer__contactContainer__titleContainer__title">~ CONTACTO ~</div>
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div> -->
 
-            <!-- <div class="slider">
-                <div class="slider-track">
-                    <div class="slide">
-                        <img src="img/diseño_pagina_web.png" alt="Product 1">
-                        <h2>Diseño de páginas web</h2>
-                        <p>Combina creatividad, funcionalidad y usabilidad para ofrecer experiencias digitales atractivas y efectivas que se adapten a las necesidades del usuario</p>
+            <div class="mainContainer__contactContainer__contact">
+
+                <div class="mainContainer__contactContainer__contact__myData">
+
+                    <div class="mainContainer__contactContainer__contact__myData__data">
+                        <div class="mainContainer__contactContainer__contact__myData__data__prop">+54 9 2926459172</div>
+                        <div class="mainContainer__contactContainer__contact__myData__data__prop">mbsolucionesinformaticas@gmail.com</div>
                     </div>
-                    <div class="slide">
-                        <img src="https://via.placeholder.com/400x200" alt="Product 2">
-                        <h2>Product 2</h2>
-                        <p>This is another great product worth checking out.</p>
-                    </div>
-                    <div class="slide">
-                        <img src="https://via.placeholder.com/400x200" alt="Product 3">
-                        <h2>Product 3</h2>
-                        <p>Don't miss this amazing product in your collection.</p>
-                    </div>
+
                 </div>
-                <div class="buttons">
-                    <button id="prev">&#10094;</button>
-                    <button id="next">&#10095;</button>
+
+                <div class="mainContainer__contactContainer__contact__formContainer">
+                    
+                    <div class="mainContainer__contactContainer__contact__formContainer__form">
+
+                        <div class="mainContainer__contactContainer__contact__formContainer__form__labels">
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__labels__label">Nombre *</div>
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__labels__label">Apellido *</div>
+                        </div>
+
+                        <div class="mainContainer__contactContainer__contact__formContainer__form__inputs">
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__inputs__input">
+                                <input type="text" class="mainContainer__contactContainer__contact__formContainer__form__inputs__input__prop">
+                            </div>
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__inputs__input">
+                                <input type="text" class="mainContainer__contactContainer__contact__formContainer__form__inputs__input__prop">
+                            </div>
+                        </div>
+
+                        <div class="mainContainer__contactContainer__contact__formContainer__form__labels">
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__labels__label">Email *</div>
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__labels__label">Teléfono *</div>
+                        </div>
+
+                        <div class="mainContainer__contactContainer__contact__formContainer__form__inputs">
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__inputs__input">
+                                <input type="email" class="mainContainer__contactContainer__contact__formContainer__form__inputs__input__prop">
+                            </div>
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__inputs__input">
+                                <input type="text" class="mainContainer__contactContainer__contact__formContainer__form__inputs__input__prop">
+                            </div>
+                        </div>
+
+                        <div class="mainContainer__contactContainer__contact__formContainer__form__labelMsj">
+                            <div class="mainContainer__contactContainer__contact__formContainer__form__labelMsj__label">Mensaje *</div>
+                        </div>
+
+                        <div class="mainContainer__contactContainer__contact__formContainer__form__textAreaContainer">
+                            <textarea class="mainContainer__contactContainer__contact__formContainer__form__textAreaContainer__textArea" name="" id=""></textarea>
+                        </div>
+
+                        <div class="mainContainer__contactContainer__contact__formContainer__form__btnContainer">
+
+                            <button class="mainContainer__contactContainer__contact__formContainer__form__btnContainer__btn">Enviar</button>
+
+                        </div>
+
+                    </div>
+
                 </div>
-            </div> -->
+
+            </div>
 
         </div>
 
