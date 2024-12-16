@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @keyframes animacionEntrada1 {
@@ -62,11 +63,11 @@
 }
 .mainContainer__services__title {
   width: 100%;
-  padding-bottom: 2vh;
+  padding-bottom: 4vh;
 }
 .mainContainer__services__title__prop {
   text-align: center;
-  font-size: 50px;
+  font-size: 35px;
   font-family: sans-serif;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -74,28 +75,28 @@
   background-color: #231b72;
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: nowrap;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
-}
-.mainContainer__services__carouselsContainer__carouselContainer {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10vh 0vh;
+  overflow: hidden;
+  color: white;
+  /* &__carouselContainer {
+      width: 100%;
+      height: auto;
+      @include disFC();
+      padding: 10vh 0vh;
+  } */
 }
 
 /* carousel 1 */
 .carousel {
-  width: 60%;
+  width: 40%;
   height: 600px;
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  background-color: #635ab6;
+  background-color: rgb(99, 90, 182);
   padding: 5vh 0vh;
   box-shadow: 24px 24px 20px black, -4px -4px 10px black;
   display: flex;
@@ -116,13 +117,16 @@
   box-sizing: border-box;
 }
 .slide__img {
-  width: 60%;
+  width: 30%;
   display: flex;
   justify-self: center;
+  padding-bottom: 5vh;
 }
 .slide__title {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 2vh;
 }
 .slide__descr {
   width: 50%;
@@ -186,7 +190,7 @@
 /* carousel 1 */
 /* carousel 2 */
 .carousel1 {
-  width: 60%;
+  width: 40%;
   height: 600px;
   overflow: hidden;
   position: relative;
@@ -207,16 +211,19 @@
   box-sizing: border-box;
 }
 .slide1__img {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-self: center;
+  padding-bottom: 5vh;
 }
 .slide1__title {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 2vh;
 }
 .slide1__descr {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-self: center;
   font-size: 30px;
@@ -321,7 +328,7 @@
 }
 .headerContainer__header__menuContainer__menu__item__prop {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   transition: all 0.2s ease-in-out;
   font-weight: bold;
   font-family: sans-serif;
@@ -355,7 +362,7 @@
 .headerContainer__homeContainer__phraseContainer__phrase {
   width: 80%;
   color: rgb(255, 255, 255);
-  font-size: 95px;
+  font-size: 60px;
   -webkit-text-stroke: 3px white;
   font-weight: bold;
   opacity: 0;
