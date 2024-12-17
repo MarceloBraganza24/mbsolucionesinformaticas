@@ -126,137 +126,143 @@
         width: 100%;
         height: auto;
         padding-top: 4vh;
-        &__titleContainer {
-            background-color: rgb(0, 0, 0,0.85);
-            width: 100%;
-            height: auto;
-            @include disFC();
-            box-shadow: 10px 10px 10px black, -4px -4px 10px black;
-            border-bottom-left-radius: 4vh;
-            border-bottom-right-radius: 4vh;
-            &__title {
-                text-align: center;
-                font-size: 25px;
-                font-family: sans-serif;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                border-radius: 20vh;
-                padding: 2vh 0vh;
-                font-weight: bold;
-                color: white;
-            }
-        }
         &__contact {
-            background-image: url('../img/fondo_contact2.jpg');
+            background-image: url('../img/fondo_contact_negro.jpg');
             background-size: cover;
             overflow: hidden;
             width: 100%;
             height: auto;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            margin-top: 4vh;
-            padding: 5vh 0vh;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1vh;
+            padding: 0vh 0vh;
             border-top-left-radius: 10%;
             border-top-right-radius: 10%;
             box-shadow: 10px 10px 10px black, -4px -4px 10px black;
-            &__myData {
+            &__titleContainer {
+                background-color: rgb(0, 0, 0,0.7);
                 width: 100%;
                 height: auto;
                 @include disFC();
-                color: white;
-                font-size: 18px;
-                border-right: 0.5vh solid white;
-                &__data {
-                    background-color: rgb(195, 191, 221, 0.7);
-                    padding: 4vh 4vh;
-                    border-top-left-radius: 10vh;
-                    border-bottom-right-radius: 10vh;
-                    box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+                //box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+                border-bottom-left-radius: 4vh;
+                border-bottom-right-radius: 4vh;
+                &__title {
+                    text-align: center;
+                    font-size: 25px;
+                    font-family: sans-serif;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    border-radius: 20vh;
+                    padding: 4vh 0vh;
+                    font-weight: bold;
+                    color: white;
                 }
             }
-            &__formContainer {
+            &__info {
                 width: 100%;
                 height: auto;
-                @include disFC();
-                padding: 5vh 0vh;
-                &__form {
-                    width: 60%;
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                &__myData {
+                    width: 100%;
                     height: auto;
-                    padding: 5vh 5vh 6vh 5vh;
-                    border-radius: 5vh;
+                    @include disFC();
                     color: white;
-                    &__labels {
-                        width: 100%;
-                        height: auto;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 4vh;
-                        padding-top: 1vh;
-                        &__label {
-                            font-size: 16px;
-                        }
+                    font-size: 18px;
+                    border-right: 0.5vh solid white;
+                    &__data {
+                        background-color: rgba(0, 0, 0, 0.8);
+                        padding: 4vh 4vh;
+                        border-top-left-radius: 10vh;
+                        border-bottom-right-radius: 10vh;
+                        box-shadow: 10px 10px 10px black, -4px -4px 10px black;
                     }
-                    &__inputs {
-                        width: 100%;
+                }
+                &__formContainer {
+                    width: 100%;
+                    height: auto;
+                    @include disFC();
+                    padding: 5vh 0vh;
+                    &__form {
+                        width: 60%;
                         height: auto;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 4vh;
-                        padding-top: 1vh;
-                        &__input {
+                        padding: 5vh 5vh 6vh 5vh;
+                        border-radius: 5vh;
+                        color: white;
+                        &__labels {
+                            width: 100%;
+                            height: auto;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 4vh;
+                            padding-top: 1vh;
+                            &__label {
+                                font-size: 16px;
+                            }
+                        }
+                        &__inputs {
+                            width: 100%;
+                            height: auto;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 4vh;
+                            padding-top: 1vh;
+                            &__input {
+                                width: 100%;
+                                height: auto;
+                                @include disFC();
+                                &__prop {
+                                    width: 100%;
+                                    height: 30px;
+                                    font-size: 16px;
+                                    border-radius: 1vh;
+                                    border: none;
+                                }
+                            }
+                        }
+                        &__labelMsj {
+                            width: 100%;
+                            height: auto;
+                            padding-top: 1vh;
+                            &__label {
+                                font-size: 16px;
+                            }
+                        }
+                        &__textAreaContainer {
                             width: 100%;
                             height: auto;
                             @include disFC();
-                            &__prop {
-                                width: 100%;
-                                height: 30px;
+                            padding-top: 1vh;
+                            &__textArea {
+                                width: 90%;
+                                height: 100px;
                                 font-size: 16px;
                                 border-radius: 1vh;
-                                border: none;
                             }
                         }
-                    }
-                    &__labelMsj {
-                        width: 100%;
-                        height: auto;
-                        padding-top: 1vh;
-                        &__label {
-                            font-size: 16px;
-                        }
-                    }
-                    &__textAreaContainer {
-                        width: 100%;
-                        height: auto;
-                        @include disFC();
-                        padding-top: 1vh;
-                        &__textArea {
-                            width: 90%;
-                            height: 100px;
-                            font-size: 16px;
-                            border-radius: 1vh;
-                        }
-                    }
-                    &__btnContainer {
-                        width: 100%;
-                        height: auto;
-                        @include disFC();
-                        padding-top: 4vh;
-                        &__btn {
-                            background-color: #cfcddd;
-                            width: 60%;
+                        &__btnContainer {
+                            width: 100%;
                             height: auto;
-                            padding: 0.5vh 5vh;
-                            box-shadow: 5px 5px 15px black, -4px -4px 10px black;
-                            color: black;
-                            font-size: 20px;
-                            border-radius: 2vh;
-                            transition: all 0.5s;
-                            letter-spacing: 0.3vh;
-                            font-weight: bold;
-                            &:hover {
-                                background-color: white;
+                            @include disFC();
+                            padding-top: 4vh;
+                            &__btn {
+                                background-color: #cfcddd;
+                                width: 60%;
+                                height: auto;
+                                padding: 0.5vh 5vh;
+                                box-shadow: 5px 5px 15px black, -4px -4px 10px black;
                                 color: black;
-                                cursor: pointer;
-                                scale: (1.1)
+                                font-size: 20px;
+                                border-radius: 2vh;
+                                transition: all 0.5s;
+                                letter-spacing: 0.3vh;
+                                font-weight: bold;
+                                &:hover {
+                                    background-color: white;
+                                    color: black;
+                                    cursor: pointer;
+                                    scale: (1.1)
+                                }
                             }
                         }
                     }
@@ -373,126 +379,133 @@
         &__contactContainer {
             width: 100%;
             height: auto;
-            padding-top: 4vh;
-            &__titleContainer {
-                background-color: rgb(0, 0, 0,0.85);
-                width: 100%;
-                height: auto;
-                @include disFC();
-                &__title {
-                    text-align: center;
-                    font-size: 18px;
-                    font-family: sans-serif;
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                    border-radius: 20vh;
-                    padding: 2vh 10vh;
-                    color: white
-                }
-            }
+            padding-top: 0vh;
             &__contact {
                 width: 100%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 margin-top: 4vh;
-                padding: 10vh 0vh 0vh 0vh;
+                padding: 0vh;
                 border-top-right-radius: 10%;
-                &__myData {
+                &__titleContainer {
+                    background-color: rgb(0, 0, 0,0.7);
                     width: 100%;
                     height: auto;
                     @include disFC();
-                    color: white;
-                    font-size: 14px;
-                    border-right: 0.5vh solid white;
-                    &__data {
-                        background-color: rgb(195, 191, 221, 0.7);
-                        padding: 4vh 4vh;
-                        border-top-left-radius: 10vh;
-                        border-bottom-right-radius: 10vh;
-                        box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+                    &__title {
+                        text-align: center;
+                        font-size: 18px;
+                        font-family: sans-serif;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        border-radius: 20vh;
+                        padding: 4vh 10vh;
+                        color: white
                     }
                 }
-                &__formContainer {
+                &__info {
                     width: 100%;
                     height: auto;
-                    @include disFC();
-                    padding: 5vh 0vh;
-                    &__form {
-                        width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 5vh;
+                    &__myData {
+                        width: 100%;
                         height: auto;
-                        padding: 0vh 4vh 5vh 4vh;
-                        border-radius: 5vh;
-                        &__labels {
-                            width: 100%;
-                            height: auto;
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            gap: 4vh;
-                            padding-top: 1vh;
-                            &__label {
-                                font-size: 14px;
-                            }
+                        @include disFC();
+                        color: white;
+                        font-size: 14px;
+                        border-right: 0.5vh solid white;
+                        &__data {
+                            background-color: rgba(0, 0, 0, 0.7);
+                            padding: 4vh 4vh;
+                            border-top-left-radius: 10vh;
+                            border-bottom-right-radius: 10vh;
+                            box-shadow: 10px 10px 10px black, -4px -4px 10px black;
                         }
-                        &__inputs {
-                            width: 100%;
+                    }
+                    &__formContainer {
+                        width: 100%;
+                        height: auto;
+                        @include disFC();
+                        padding: 5vh 0vh;
+                        &__form {
+                            width: 80%;
                             height: auto;
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            gap: 4vh;
-                            padding-top: 1vh;
-                            &__input {
+                            padding: 0vh 4vh 5vh 4vh;
+                            border-radius: 5vh;
+                            &__labels {
+                                width: 100%;
+                                height: auto;
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 4vh;
+                                padding-top: 1vh;
+                                &__label {
+                                    font-size: 14px;
+                                }
+                            }
+                            &__inputs {
+                                width: 100%;
+                                height: auto;
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 4vh;
+                                padding-top: 1vh;
+                                &__input {
+                                    width: 100%;
+                                    height: auto;
+                                    @include disFC();
+                                    &__prop {
+                                        width: 100%;
+                                        height: 30px;
+                                        font-size: 14px;
+                                        border-radius: 1vh;
+                                        border: none;
+                                    }
+                                }
+                            }
+                            &__labelMsj {
+                                width: 100%;
+                                height: auto;
+                                padding-top: 1vh;
+                                &__label {
+                                    font-size: 14px;
+                                }
+                            }
+                            &__textAreaContainer {
                                 width: 100%;
                                 height: auto;
                                 @include disFC();
-                                &__prop {
-                                    width: 100%;
-                                    height: 30px;
+                                padding-top: 1vh;
+                                &__textArea {
+                                    width: 90%;
+                                    height: 100px;
                                     font-size: 14px;
                                     border-radius: 1vh;
-                                    border: none;
                                 }
                             }
-                        }
-                        &__labelMsj {
-                            width: 100%;
-                            height: auto;
-                            padding-top: 1vh;
-                            &__label {
-                                font-size: 14px;
-                            }
-                        }
-                        &__textAreaContainer {
-                            width: 100%;
-                            height: auto;
-                            @include disFC();
-                            padding-top: 1vh;
-                            &__textArea {
-                                width: 90%;
-                                height: 100px;
-                                font-size: 14px;
-                                border-radius: 1vh;
-                            }
-                        }
-                        &__btnContainer {
-                            width: 100%;
-                            height: auto;
-                            @include disFC();
-                            padding-top: 4vh;
-                            &__btn {
-                                background-color: #cfcddd;
-                                width: 80%;
+                            &__btnContainer {
+                                width: 100%;
                                 height: auto;
-                                padding: 0.5vh 5vh;
-                                box-shadow: 5px 5px 15px black, -4px -4px 10px black;
-                                color: black;
-                                font-size: 20px;
-                                border-radius: 2vh;
-                                transition: all 0.5s;
-                                &:hover {
-                                    background-color: white;
+                                @include disFC();
+                                padding-top: 4vh;
+                                &__btn {
+                                    background-color: #cfcddd;
+                                    width: 80%;
+                                    height: auto;
+                                    padding: 0.5vh 5vh;
+                                    box-shadow: 5px 5px 15px black, -4px -4px 10px black;
                                     color: black;
-                                    cursor: pointer;
-                                    scale: (1.1)
+                                    font-size: 20px;
+                                    border-radius: 2vh;
+                                    transition: all 0.5s;
+                                    &:hover {
+                                        background-color: white;
+                                        color: black;
+                                        cursor: pointer;
+                                        scale: (1.1)
+                                    }
                                 }
                             }
                         }
