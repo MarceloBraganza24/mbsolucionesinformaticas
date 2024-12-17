@@ -4,12 +4,21 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.networksContainer {
+  background-color: rgb(13, 8, 50);
+  width: 100%;
+  height: auto;
+  position: fixed;
+  color: wheat;
+  z-index: 9999;
+}
+
 .mainContainer {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 0vh 0vh 4vh 0vh;
+  padding: 0vh 0vh vh 0vh;
 }
 .mainContainer__separatorContainer {
   width: 100%;
@@ -31,7 +40,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 2vh;
-  gap: 2vh;
+  gap: 4vh;
 }
 .mainContainer__services__title {
   width: 100%;
@@ -43,12 +52,13 @@
 .mainContainer__services__title__prop {
   background-color: #231b72;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   font-family: sans-serif;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   border-radius: 20vh;
-  padding: 1vh 20vh;
+  padding: 1vh 25vh;
   color: white;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__services__cardsContainer {
   background-color: #231b72;
@@ -59,6 +69,7 @@
   border-radius: 10%;
   overflow: hidden;
   color: black;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__services__cardsContainer__cardContainer {
   width: 100%;
@@ -122,30 +133,39 @@
   padding-top: 4vh;
 }
 .mainContainer__contactContainer__titleContainer {
+  background-color: rgba(0, 0, 0, 0.85);
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+  border-bottom-left-radius: 4vh;
+  border-bottom-right-radius: 4vh;
 }
 .mainContainer__contactContainer__titleContainer__title {
-  background-color: #0d0832;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   font-family: sans-serif;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   border-radius: 20vh;
-  padding: 1vh 20vh;
+  padding: 2vh 0vh;
+  font-weight: bold;
   color: white;
 }
 .mainContainer__contactContainer__contact {
-  background-color: #423d73;
+  background-image: url("../img/fondo_contact2.jpg");
+  background-size: cover;
+  overflow: hidden;
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   margin-top: 4vh;
   padding: 5vh 0vh;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__contactContainer__contact__myData {
   width: 100%;
@@ -154,8 +174,15 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 22px;
-  border-right: 0.5vh solid #0d0832;
+  font-size: 18px;
+  border-right: 0.5vh solid white;
+}
+.mainContainer__contactContainer__contact__myData__data {
+  background-color: rgba(195, 191, 221, 0.7);
+  padding: 4vh 4vh;
+  border-top-left-radius: 10vh;
+  border-bottom-right-radius: 10vh;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__contactContainer__contact__formContainer {
   width: 100%;
@@ -163,33 +190,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10vh 0vh;
+  padding: 5vh 0vh;
 }
 .mainContainer__contactContainer__contact__formContainer__form {
-  background-color: #918cc5;
   width: 60%;
   height: auto;
   padding: 5vh 5vh 6vh 5vh;
   border-radius: 5vh;
-  box-shadow: 24px 24px 10px black, -4px -4px 10px black;
+  color: white;
 }
 .mainContainer__contactContainer__contact__formContainer__form__labels {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1vh;
+  gap: 4vh;
   padding-top: 1vh;
 }
 .mainContainer__contactContainer__contact__formContainer__form__labels__label {
-  font-size: 20px;
+  font-size: 16px;
 }
 .mainContainer__contactContainer__contact__formContainer__form__inputs {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1vh;
+  gap: 4vh;
   padding-top: 1vh;
 }
 .mainContainer__contactContainer__contact__formContainer__form__inputs__input {
@@ -212,7 +238,7 @@
   padding-top: 1vh;
 }
 .mainContainer__contactContainer__contact__formContainer__form__labelMsj__label {
-  font-size: 20px;
+  font-size: 16px;
 }
 .mainContainer__contactContainer__contact__formContainer__form__textAreaContainer {
   width: 100%;
@@ -237,19 +263,21 @@
   padding-top: 4vh;
 }
 .mainContainer__contactContainer__contact__formContainer__form__btnContainer__btn {
-  background-color: #423d73;
+  background-color: #cfcddd;
   width: 60%;
   height: auto;
-  padding: 1vh 5vh;
+  padding: 0.5vh 5vh;
   box-shadow: 5px 5px 15px black, -4px -4px 10px black;
-  color: white;
+  color: black;
   font-size: 20px;
   border-radius: 2vh;
   transition: all 0.5s;
+  letter-spacing: 0.3vh;
+  font-weight: bold;
 }
 .mainContainer__contactContainer__contact__formContainer__form__btnContainer__btn:hover {
   background-color: white;
-  color: #423d73;
+  color: black;
   cursor: pointer;
   scale: 1.1;
 }
@@ -259,6 +287,7 @@
   height: 100vh;
   background-image: url("../img/luna_eclipse.jpg");
   position: relative;
+  overflow: hidden;
 }
 .headerContainer__headerMobile {
   display: none;
@@ -270,6 +299,9 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   position: fixed;
   transition: top 0.5s ease-in-out;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  z-index: 1;
 }
 .headerContainer__header__logoContainer {
   width: 100%;
@@ -306,7 +338,7 @@
 }
 .headerContainer__header__menuContainer__menu__item__prop {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   transition: all 0.2s ease-in-out;
   font-weight: bold;
   font-family: sans-serif;
@@ -340,7 +372,7 @@
 .headerContainer__homeContainer__phraseContainer__phrase {
   width: 80%;
   color: rgb(255, 255, 255);
-  font-size: 60px;
+  font-size: 55px;
   -webkit-text-stroke: 3px white;
   font-weight: bold;
 }
@@ -381,6 +413,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
     position: fixed;
     z-index: 1;
     transition: top 0.5s ease-in-out;
@@ -466,7 +500,7 @@
     height: auto;
     position: fixed;
     display: none;
-    margin-top: 16vh;
+    margin-top: 14vh;
     border-top-left-radius: 20%;
   }
   .menuOptionsContainer__menuOptions {
@@ -548,6 +582,7 @@
     align-items: center;
     padding: 5vh 0vh 5vh 0vh;
     border-radius: 5vh;
+    box-shadow: 10px 10px 10px black, -4px -4px 10px black;
   }
   .mainContainer__services__cardsContainer__cardContainer__card {
     background-color: #ccc;
@@ -602,6 +637,7 @@
     padding-top: 4vh;
   }
   .mainContainer__contactContainer__titleContainer {
+    background-color: rgba(0, 0, 0, 0.85);
     width: 100%;
     height: auto;
     display: flex;
@@ -609,23 +645,22 @@
     align-items: center;
   }
   .mainContainer__contactContainer__titleContainer__title {
-    background-color: #0d0832;
     text-align: center;
     font-size: 18px;
     font-family: sans-serif;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     border-radius: 20vh;
-    padding: 1vh 10vh;
+    padding: 2vh 10vh;
     color: white;
   }
   .mainContainer__contactContainer__contact {
-    background-color: #423d73;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     margin-top: 4vh;
-    padding: 5vh 0vh 0vh 0vh;
+    padding: 10vh 0vh 0vh 0vh;
+    border-top-right-radius: 10%;
   }
   .mainContainer__contactContainer__contact__myData {
     width: 100%;
@@ -634,8 +669,15 @@
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 16px;
-    border-right: none;
+    font-size: 14px;
+    border-right: 0.5vh solid white;
+  }
+  .mainContainer__contactContainer__contact__myData__data {
+    background-color: rgba(195, 191, 221, 0.7);
+    padding: 4vh 4vh;
+    border-top-left-radius: 10vh;
+    border-bottom-right-radius: 10vh;
+    box-shadow: 10px 10px 10px black, -4px -4px 10px black;
   }
   .mainContainer__contactContainer__contact__formContainer {
     width: 100%;
@@ -646,30 +688,28 @@
     padding: 5vh 0vh;
   }
   .mainContainer__contactContainer__contact__formContainer__form {
-    background-color: #918cc5;
     width: 80%;
     height: auto;
-    padding: 5vh 4vh 5vh 4vh;
+    padding: 0vh 4vh 5vh 4vh;
     border-radius: 5vh;
-    box-shadow: 10px 10px 10px black, -4px -4px 10px black;
   }
   .mainContainer__contactContainer__contact__formContainer__form__labels {
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1vh;
+    gap: 4vh;
     padding-top: 1vh;
   }
   .mainContainer__contactContainer__contact__formContainer__form__labels__label {
-    font-size: 16px;
+    font-size: 14px;
   }
   .mainContainer__contactContainer__contact__formContainer__form__inputs {
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1vh;
+    gap: 4vh;
     padding-top: 1vh;
   }
   .mainContainer__contactContainer__contact__formContainer__form__inputs__input {
@@ -682,7 +722,7 @@
   .mainContainer__contactContainer__contact__formContainer__form__inputs__input__prop {
     width: 100%;
     height: 30px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 1vh;
     border: none;
   }
@@ -692,7 +732,7 @@
     padding-top: 1vh;
   }
   .mainContainer__contactContainer__contact__formContainer__form__labelMsj__label {
-    font-size: 16px;
+    font-size: 14px;
   }
   .mainContainer__contactContainer__contact__formContainer__form__textAreaContainer {
     width: 100%;
@@ -705,7 +745,7 @@
   .mainContainer__contactContainer__contact__formContainer__form__textAreaContainer__textArea {
     width: 90%;
     height: 100px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 1vh;
   }
   .mainContainer__contactContainer__contact__formContainer__form__btnContainer {
@@ -717,19 +757,19 @@
     padding-top: 4vh;
   }
   .mainContainer__contactContainer__contact__formContainer__form__btnContainer__btn {
-    background-color: #423d73;
+    background-color: #cfcddd;
     width: 80%;
     height: auto;
     padding: 0.5vh 5vh;
     box-shadow: 5px 5px 15px black, -4px -4px 10px black;
-    color: white;
+    color: black;
     font-size: 20px;
     border-radius: 2vh;
     transition: all 0.5s;
   }
   .mainContainer__contactContainer__contact__formContainer__form__btnContainer__btn:hover {
     background-color: white;
-    color: #423d73;
+    color: black;
     cursor: pointer;
     scale: 1.1;
   }

@@ -60,9 +60,9 @@ window.addEventListener('scroll', () => {
   
     if (currentScroll > lastScrollTop) {
       header.style.top = '-18vh';
-      header.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+      header.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
       headerMobile.style.top = '-12vh';
-      headerMobile.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+      headerMobile.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
       document.getElementById('menuOptionsContainer').style.display = 'none';
     } else {
       header.style.top = '0';
