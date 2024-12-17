@@ -61,12 +61,14 @@
             }
         }
         &__cardsContainer {
-            background-color: #231b72;
+            background-image: url('../img/fondo_service.jpg');
+            background-size: cover;
+            //background-color: #231b72;
             width: 100%;
             height: auto;
             display: flex;
             flex-wrap: nowrap;
-            border-radius: 10%;
+            //border-radius: 10%;
             overflow: hidden;
             color: black;
             box-shadow: 10px 10px 10px black, -4px -4px 10px black;
@@ -93,7 +95,7 @@
                         }
                     }
                     &__titleContainer {
-                        background-color: rgb(88, 137, 137);
+                        background-color: rgb(35, 27, 114, 0.9);
                         width: 100%;
                         height: auto;
                         @include disFC();
@@ -103,6 +105,7 @@
                             text-align: center;
                             font-size: 20px;
                             padding: 0vh 2vh;
+                            color: white;
                         }
                     }
                     &__descrContainer {
@@ -140,7 +143,7 @@
             border-top-right-radius: 10%;
             box-shadow: 10px 10px 10px black, -4px -4px 10px black;
             &__titleContainer {
-                background-color: rgb(0, 0, 0,0.7);
+                //background-color: rgb(0, 0, 0,0.7);
                 width: 100%;
                 height: auto;
                 @include disFC();
@@ -169,7 +172,7 @@
                     @include disFC();
                     color: white;
                     font-size: 18px;
-                    border-right: 0.5vh solid white;
+                    //border-right: 0.5vh solid white;
                     &__data {
                         background-color: rgba(0, 0, 0, 0.8);
                         padding: 4vh 4vh;
@@ -184,11 +187,15 @@
                     @include disFC();
                     padding: 5vh 0vh;
                     &__form {
+                        background-color: rgb(0, 0, 0, 0.7);
                         width: 60%;
                         height: auto;
                         padding: 5vh 5vh 6vh 5vh;
-                        border-radius: 5vh;
+                        //border-radius: 5vh;
                         color: white;
+                        border-top-left-radius: 10vh;
+                        border-bottom-right-radius: 10vh;
+                        box-shadow: 10px 10px 10px black, -4px -4px 10px black;
                         &__labels {
                             width: 100%;
                             height: auto;
@@ -295,6 +302,7 @@
             }
         }
         &__services {
+            background-color: white;
             width: 100%;
             height: auto;
             display: flex;
@@ -312,6 +320,7 @@
                 }
             }
             &__cardsContainer {
+                background-image: none;
                 background-color: white;
                 width: 100%;
                 height: auto;
@@ -323,7 +332,8 @@
                 color: black;
                 gap: 5vh;
                 &__cardContainer {
-                    background-color: #231b72;
+                    background-image: url('../img/fondo_service.jpg');
+                    background-size: cover;
                     width: 100%;
                     height: auto;
                     @include disFC();
@@ -347,7 +357,7 @@
                             }
                         }
                         &__titleContainer {
-                            background-color: rgb(88, 137, 137);
+                            background-color: #231b72;
                             width: 100%;
                             height: auto;
                             @include disFC();
@@ -389,7 +399,7 @@
                 padding: 0vh;
                 border-top-right-radius: 10%;
                 &__titleContainer {
-                    background-color: rgb(0, 0, 0,0.7);
+                    //background-color: rgb(0, 0, 0,0.7);
                     width: 100%;
                     height: auto;
                     @include disFC();

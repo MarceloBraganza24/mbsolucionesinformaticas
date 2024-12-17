@@ -61,12 +61,12 @@
   box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__services__cardsContainer {
-  background-color: #231b72;
+  background-image: url("../img/fondo_service.jpg");
+  background-size: cover;
   width: 100%;
   height: auto;
   display: flex;
   flex-wrap: nowrap;
-  border-radius: 10%;
   overflow: hidden;
   color: black;
   box-shadow: 10px 10px 10px black, -4px -4px 10px black;
@@ -100,7 +100,7 @@
   width: 70%;
 }
 .mainContainer__services__cardsContainer__cardContainer__card__titleContainer {
-  background-color: rgb(88, 137, 137);
+  background-color: rgba(35, 27, 114, 0.9);
   width: 100%;
   height: auto;
   display: flex;
@@ -113,6 +113,7 @@
   text-align: center;
   font-size: 20px;
   padding: 0vh 2vh;
+  color: white;
 }
 .mainContainer__services__cardsContainer__cardContainer__card__descrContainer {
   width: 100%;
@@ -147,7 +148,6 @@
   box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__contactContainer__contact__titleContainer {
-  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: auto;
   display: flex;
@@ -180,7 +180,6 @@
   align-items: center;
   color: white;
   font-size: 18px;
-  border-right: 0.5vh solid white;
 }
 .mainContainer__contactContainer__contact__info__myData__data {
   background-color: rgba(0, 0, 0, 0.8);
@@ -198,11 +197,14 @@
   padding: 5vh 0vh;
 }
 .mainContainer__contactContainer__contact__info__formContainer__form {
+  background-color: rgba(0, 0, 0, 0.7);
   width: 60%;
   height: auto;
   padding: 5vh 5vh 6vh 5vh;
-  border-radius: 5vh;
   color: white;
+  border-top-left-radius: 10vh;
+  border-bottom-right-radius: 10vh;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__contactContainer__contact__info__formContainer__form__labels {
   width: 100%;
@@ -550,6 +552,7 @@
     border-bottom-left-radius: 20vh;
   }
   .mainContainer__services {
+    background-color: white;
     width: 100%;
     height: auto;
     display: flex;
@@ -568,6 +571,7 @@
     color: white;
   }
   .mainContainer__services__cardsContainer {
+    background-image: none;
     background-color: white;
     width: 100%;
     height: auto;
@@ -580,7 +584,8 @@
     gap: 5vh;
   }
   .mainContainer__services__cardsContainer__cardContainer {
-    background-color: #231b72;
+    background-image: url("../img/fondo_service.jpg");
+    background-size: cover;
     width: 100%;
     height: auto;
     display: flex;
@@ -610,7 +615,7 @@
     width: 70%;
   }
   .mainContainer__services__cardsContainer__cardContainer__card__titleContainer {
-    background-color: rgb(88, 137, 137);
+    background-color: #231b72;
     width: 100%;
     height: auto;
     display: flex;
@@ -652,7 +657,6 @@
     border-top-right-radius: 10%;
   }
   .mainContainer__contactContainer__contact__titleContainer {
-    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: auto;
     display: flex;
