@@ -11,12 +11,25 @@
 }
 
 .networksContainer {
-    background-color: rgb(13, 8, 50);
+    //background-color: rgb(13, 8, 50);
     width: 100%;
     height: auto;
     position: fixed;
+    bottom: 0;
     color: wheat;
     z-index: 9999;
+    padding: 2vh 0vh;
+    z-index: 1;
+    &__network {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: end;
+        &__img {
+            width: 5%;
+            padding-right: 5vh;
+        }
+    }
 }
 
 .mainContainer {
@@ -82,7 +95,7 @@
                     width: 85%;
                     height: 500px;
                     border-radius: 5vh;
-                    padding: 2vh 0vh;
+                    padding: 2vh 0vh 4vh 0vh;
                     display: grid;
                     grid-template-rows: 2fr 1fr 3fr;
                     box-shadow: 14px 14px 10px black, -4px -4px 10px black;
@@ -91,7 +104,10 @@
                         height: auto;
                         @include disFC();
                         &__img {
+                            //background-color: rgba(105, 105, 105, 0.6);
                             width: 70%;
+                            // border: 0.3vh solid black;
+                            // border-radius: 2vh;
                         }
                     }
                     &__titleContainer {
@@ -113,9 +129,13 @@
                         height: auto;
                         display: flex;
                         justify-content: center;
-                        overflow: hidden;
+                        //overflow: hidden;
+                        overflow-y: auto;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
                         &__descr {
-                            width: 90%;
+                            width: 85%;
                             text-align: justify;
                             font-size: 16px;
                             padding-top: 1vh;
@@ -128,19 +148,19 @@
     &__contactContainer {
         width: 100%;
         height: auto;
-        padding-top: 4vh;
+        padding-top: 1vh;
         &__contact {
-            background-image: url('../img/fondo_contact_negro.jpg');
+            background-image: url('../img/fondo_contact3.jpg');
             background-size: cover;
             overflow: hidden;
             width: 100%;
             height: auto;
             display: flex;
             flex-direction: column;
-            margin-top: 1vh;
-            padding: 0vh 0vh;
-            border-top-left-radius: 10%;
-            border-top-right-radius: 10%;
+            //margin-top: 0vh;
+            //padding: 0vh 0vh;
+            // border-top-left-radius: 5%;
+            // border-top-right-radius: 5%;
             box-shadow: 10px 10px 10px black, -4px -4px 10px black;
             &__titleContainer {
                 //background-color: rgb(0, 0, 0,0.7);
@@ -282,6 +302,29 @@
 @import "header";
 
 @media (max-width: 480px) {
+
+    .networksContainer {
+        //background-color: rgb(13, 8, 50);
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        color: wheat;
+        z-index: 9999;
+        padding: 2vh 0vh;
+        z-index: 1;
+        &__network {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: end;
+            &__img {
+                width: 15%;
+                padding-right: 5vh;
+            }
+        }
+    }
+
     .mainContainer {
         background-color: whitesmoke;
         width: 100%;
@@ -345,7 +388,7 @@
                         width: 85%;
                         height: 500px;
                         border-radius: 5vh;
-                        padding: 2vh 0vh;
+                        padding: 2vh 0vh 4vh 0vh;
                         display: grid;
                         grid-template-rows: 2fr 1fr 3fr;
                         &__imgContainer {
@@ -374,9 +417,8 @@
                             height: auto;
                             display: flex;
                             justify-content: center;
-                            overflow: hidden;
                             &__descr {
-                                width: 90%;
+                                width: 85%;
                                 text-align: justify;
                                 font-size: 16px;
                                 padding-top: 1vh;
@@ -391,13 +433,15 @@
             height: auto;
             padding-top: 0vh;
             &__contact {
+                background-image: url('../img/fondo_contact3V.jpg');
+                background-size: cover;
                 width: 100%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
-                margin-top: 4vh;
-                padding: 0vh;
-                border-top-right-radius: 10%;
+                margin-top: 2vh;
+                //padding: 0vh;
+                //border-top-right-radius: 10%;
                 &__titleContainer {
                     //background-color: rgb(0, 0, 0,0.7);
                     width: 100%;
@@ -425,13 +469,15 @@
                         @include disFC();
                         color: white;
                         font-size: 14px;
-                        border-right: 0.5vh solid white;
+                        //border-right: 0.5vh solid white;
                         &__data {
                             background-color: rgba(0, 0, 0, 0.7);
+                            //background-color: none;
                             padding: 4vh 4vh;
                             border-top-left-radius: 10vh;
                             border-bottom-right-radius: 10vh;
                             box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+                            //box-shadow: none;
                         }
                     }
                     &__formContainer {
