@@ -74,22 +74,17 @@
     animation: rotateIn 1s ease-out forwards;
 }
 
-.networksContainer {
-    //background-color: rgb(13, 8, 50);
+/* .networksContainer {
+    background-color: rgb(13, 8, 50);
     width: 100%;
     height: auto;
     position: fixed;
     bottom: 0;
-    color: wheat;
+    //color: wheat;
     z-index: 9999;
     padding: 2vh 0vh;
     z-index: 1;
-    /* &__network {
-        background-color: green;
-        width: 10%;
-        height: auto;
-    } */
-    &__network {
+    &__networkContainer {
         //background-color: rgb(86, 73, 180);
         width: 10%;
         height: auto;
@@ -103,6 +98,44 @@
                 transform: scale(1.2);
                 //animation: rotate-in 0.3s ease-in-out forwards;
                 //animation: scale(1.1) 0.3s ease-in-out forwards
+            }
+        }
+    }
+} */
+
+.networksContainer {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    bottom: 0;
+    z-index: 9999;
+    padding: 2vh 0vh;
+    z-index: 1;
+    &__networkContainer {
+        width: 100%;
+        height: auto;
+        grid-column: 3/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &__network {
+            grid-column: 2/3;
+            &__img {
+                width: 100%;
+                @include disFC();
+                padding-right: 5vh;
+                transition: transform 0.3s ease-in-out;
+                color: white;
+                &__prop {
+                @include disFC();
+                &__p {
+                    width: 30%;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                }
             }
         }
     }
@@ -419,30 +452,38 @@
     }
 
     .networksContainer {
-        //background-color: rgb(13, 8, 50);
         width: 100%;
         height: auto;
         position: fixed;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         bottom: 0;
-        color: wheat;
         z-index: 9999;
         padding: 2vh 0vh;
         z-index: 1;
-        &__network {
-            //background-color: rgb(86, 73, 180);
-            width: 20%;
+        &__networkContainer {
+            width: 100%;
             height: auto;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            &__img {
-                width: 80%;
-                padding-right: 2vh;
-                transition: transform 0.3s ease-in-out;
-                &:hover {
-                    transform: scale(1.2);
-                    //animation: rotate-in 0.3s ease-in-out forwards;
-                    //animation: scale(1.1) 0.3s ease-in-out forwards
+            grid-column: 3/4;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            &__network {
+                grid-column: 2/3;
+                &__img {
+                    width: 100%;
+                    @include disFC();
+                    transition: transform 0.3s ease-in-out;
+                    color: white;
+                    &__prop {
+                    @include disFC();
+                        &__p {
+                            width: 100%;
+                            padding-right: 5vh;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -559,7 +600,7 @@
                 background-image: url('../img/fondo_contact3V.jpg');
                 background-size: cover;
                 //background-size: cover;
-                background-attachment: fixed;
+                background-attachment: scroll;
                 background-position: center;
                 background-repeat: no-repeat;
                 overflow: hidden;

@@ -73,34 +73,74 @@
   animation: rotateIn 1s ease-out forwards;
 }
 
+/* .networksContainer {
+    background-color: rgb(13, 8, 50);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    //color: wheat;
+    z-index: 9999;
+    padding: 2vh 0vh;
+    z-index: 1;
+    &__networkContainer {
+        //background-color: rgb(86, 73, 180);
+        width: 10%;
+        height: auto;
+        display: flex;
+        justify-self: end;
+        &__img {
+            width: 50%;
+            padding-right: 5vh;
+            transition: transform 0.3s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+                //animation: rotate-in 0.3s ease-in-out forwards;
+                //animation: scale(1.1) 0.3s ease-in-out forwards
+            }
+        }
+    }
+} */
 .networksContainer {
   width: 100%;
   height: auto;
   position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   bottom: 0;
-  color: wheat;
   z-index: 9999;
   padding: 2vh 0vh;
   z-index: 1;
-  /* &__network {
-      background-color: green;
-      width: 10%;
-      height: auto;
-  } */
 }
-.networksContainer__network {
-  width: 10%;
+.networksContainer__networkContainer {
+  width: 100%;
   height: auto;
-  display: flex;
-  justify-self: end;
+  grid-column: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.networksContainer__network__img {
-  width: 50%;
+.networksContainer__networkContainer__network {
+  grid-column: 2/3;
+}
+.networksContainer__networkContainer__network__img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-right: 5vh;
   transition: transform 0.3s ease-in-out;
+  color: white;
 }
-.networksContainer__network__img:hover {
-  transform: scale(1.2);
+.networksContainer__networkContainer__network__img__prop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.networksContainer__networkContainer__network__img__prop__p {
+  width: 30%;
+}
+.networksContainer__networkContainer__network__img__prop__p:hover {
+  cursor: pointer;
 }
 
 .mainContainer {
@@ -525,9 +565,7 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: scroll;
   }
   .headerContainer__header {
     display: none;
@@ -663,26 +701,42 @@
     width: 100%;
     height: auto;
     position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     bottom: 0;
-    color: wheat;
     z-index: 9999;
     padding: 2vh 0vh;
     z-index: 1;
   }
-  .networksContainer__network {
-    width: 20%;
+  .networksContainer__networkContainer {
+    width: 100%;
     height: auto;
+    grid-column: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .networksContainer__networkContainer__network {
+    grid-column: 2/3;
+  }
+  .networksContainer__networkContainer__network__img {
+    width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+  }
+  .networksContainer__networkContainer__network__img__prop {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-  .networksContainer__network__img {
-    width: 80%;
-    padding-right: 2vh;
-    transition: transform 0.3s ease-in-out;
+  .networksContainer__networkContainer__network__img__prop__p {
+    width: 100%;
+    padding-right: 5vh;
   }
-  .networksContainer__network__img:hover {
-    transform: scale(1.2);
+  .networksContainer__networkContainer__network__img__prop__p:hover {
+    cursor: pointer;
   }
   .mainContainer {
     background-color: whitesmoke;
@@ -804,7 +858,7 @@
   .mainContainer__contactContainer__contact {
     background-image: url("../img/fondo_contact3V.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;

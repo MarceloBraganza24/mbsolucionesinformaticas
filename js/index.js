@@ -83,6 +83,10 @@ window.addEventListener('scroll', () => {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
+document.getElementById('logoWhatsapp').addEventListener('click', function () {
+  window.open("https://wa.me/5492926459172", "_blank");
+});
+
 document.getElementById('hmenu').addEventListener('click', function () {
     if(document.getElementById('menuOptionsContainer').style.display == 'none') {
       document.getElementById('menuOptionsContainer').style.display = 'block';
