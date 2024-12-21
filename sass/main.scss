@@ -28,6 +28,16 @@
       opacity: 1;
     }
 }
+@keyframes slideInRight {
+    from {
+      transform: translateX(100%); /* Fuera de la vista por la derecha */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0); /* Posición original */
+      opacity: 1;
+    }
+}
 @keyframes scaleUp {
     from {
       transform: scale(0.8);
@@ -54,6 +64,9 @@
 .slide-in-left {
     animation: slideInLeft 1s ease-out forwards;
 }
+.slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+}
 .scale-up {
     animation: scaleUp 1s ease-out forwards;
 }
@@ -71,13 +84,19 @@
     z-index: 9999;
     padding: 2vh 0vh;
     z-index: 1;
+    /* &__network {
+        background-color: green;
+        width: 10%;
+        height: auto;
+    } */
     &__network {
-        width: 100%;
+        //background-color: rgb(86, 73, 180);
+        width: 10%;
         height: auto;
         display: flex;
-        justify-content: end;
+        justify-self: end;
         &__img {
-            width: 5%;
+            width: 50%;
             padding-right: 5vh;
             transition: transform 0.3s ease-in-out;
             &:hover {
@@ -364,6 +383,7 @@
                                 transition: all 0.5s;
                                 letter-spacing: 0.3vh;
                                 font-weight: bold;
+                                transition: all 1s;
                                 &:hover {
                                     background-color: white;
                                     color: black;
@@ -409,13 +429,20 @@
         padding: 2vh 0vh;
         z-index: 1;
         &__network {
-            width: 100%;
+            //background-color: rgb(86, 73, 180);
+            width: 20%;
             height: auto;
             display: flex;
-            justify-content: end;
+            justify-self: end;
             &__img {
-                width: 15%;
+                width: 80%;
                 padding-right: 5vh;
+                transition: transform 0.3s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                    //animation: rotate-in 0.3s ease-in-out forwards;
+                    //animation: scale(1.1) 0.3s ease-in-out forwards
+                }
             }
         }
     }
@@ -529,7 +556,7 @@
             padding-top: 0vh;
             &__contact {
                 background-image: url('../img/fondo_contact3V.jpg');
-                background-size: cover;
+                background-size: contain;
                 //background-size: cover;
                 background-attachment: fixed;
                 background-position: center;
@@ -540,6 +567,8 @@
                 display: flex;
                 flex-direction: column;
                 margin-top: 2vh;
+                background-color: black;
+                box-shadow: inset 0 8px 8px -6px rgba(0, 0, 0, 0.3);
                 //padding: 0vh;
                 //border-top-right-radius: 10%;
                 &__titleContainer {
@@ -659,12 +688,12 @@
                                     color: black;
                                     font-size: 20px;
                                     border-radius: 2vh;
-                                    transition: all 0.5s;
+                                    transition: all 1s;
                                     &:hover {
                                         background-color: white;
                                         color: black;
                                         cursor: pointer;
-                                        scale: (1.1)
+                                        transform: scale(1.1);
                                     }
                                 }
                             }

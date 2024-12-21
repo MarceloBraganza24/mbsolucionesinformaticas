@@ -23,6 +23,16 @@
     opacity: 1;
   }
 }
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Fuera de la vista por la derecha */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Posición original */
+    opacity: 1;
+  }
+}
 @keyframes scaleUp {
   from {
     transform: scale(0.8);
@@ -51,6 +61,10 @@
   animation: slideInLeft 1s ease-out forwards;
 }
 
+.slide-in-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
 .scale-up {
   animation: scaleUp 1s ease-out forwards;
 }
@@ -68,15 +82,20 @@
   z-index: 9999;
   padding: 2vh 0vh;
   z-index: 1;
+  /* &__network {
+      background-color: green;
+      width: 10%;
+      height: auto;
+  } */
 }
 .networksContainer__network {
-  width: 100%;
+  width: 10%;
   height: auto;
   display: flex;
-  justify-content: end;
+  justify-self: end;
 }
 .networksContainer__network__img {
-  width: 5%;
+  width: 50%;
   padding-right: 5vh;
   transition: transform 0.3s ease-in-out;
 }
@@ -370,6 +389,7 @@
   transition: all 0.5s;
   letter-spacing: 0.3vh;
   font-weight: bold;
+  transition: all 1s;
 }
 .mainContainer__contactContainer__contact__info__formContainer__form__btnContainer__btn:hover {
   background-color: white;
@@ -502,12 +522,13 @@
     width: 100%;
     height: 100vh;
     background-image: url("../img/luna_eclipse_V.jpg");
-    background-size: cover;
+    background-size: contain;
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: black;
   }
   .headerContainer__header {
     display: none;
@@ -604,7 +625,6 @@
     width: 100%;
     height: auto;
     position: fixed;
-    display: none;
     margin-top: 14vh;
     border-top-left-radius: 20%;
     z-index: 1;
@@ -651,14 +671,18 @@
     z-index: 1;
   }
   .networksContainer__network {
-    width: 100%;
+    width: 20%;
     height: auto;
     display: flex;
-    justify-content: end;
+    justify-self: end;
   }
   .networksContainer__network__img {
-    width: 15%;
+    width: 80%;
     padding-right: 5vh;
+    transition: transform 0.3s ease-in-out;
+  }
+  .networksContainer__network__img:hover {
+    transform: scale(1.2);
   }
   .mainContainer {
     background-color: whitesmoke;
@@ -779,7 +803,7 @@
   }
   .mainContainer__contactContainer__contact {
     background-image: url("../img/fondo_contact3V.jpg");
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -789,6 +813,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 2vh;
+    background-color: black;
+    box-shadow: inset 0 8px 8px -6px rgba(0, 0, 0, 0.3);
   }
   .mainContainer__contactContainer__contact__titleContainer {
     width: 100%;
@@ -919,12 +945,12 @@
     color: black;
     font-size: 20px;
     border-radius: 2vh;
-    transition: all 0.5s;
+    transition: all 1s;
   }
   .mainContainer__contactContainer__contact__info__formContainer__form__btnContainer__btn:hover {
     background-color: white;
     color: black;
     cursor: pointer;
-    scale: 1.1;
+    transform: scale(1.1);
   }
 }/*# sourceMappingURL=main.css.map */
