@@ -566,7 +566,6 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
-    background-attachment: scroll;
   }
   .headerContainer__header {
     display: none;
@@ -866,9 +865,6 @@
   .mainContainer__contactContainer__contact {
     background-image: url("../img/fondo_contact3V.jpg");
     background-size: cover;
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
     overflow: hidden;
     width: 100%;
     height: auto;
