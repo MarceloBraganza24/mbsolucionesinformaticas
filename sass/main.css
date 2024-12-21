@@ -1,7 +1,62 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes rotateIn {
+  from {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.scale-up {
+  animation: scaleUp 1s ease-out forwards;
+}
+
+.rotate-in {
+  animation: rotateIn 1s ease-out forwards;
 }
 
 .networksContainer {
@@ -23,6 +78,10 @@
 .networksContainer__network__img {
   width: 5%;
   padding-right: 5vh;
+  transition: transform 0.3s ease-in-out;
+}
+.networksContainer__network__img:hover {
+  transform: scale(1.2);
 }
 
 .mainContainer {
@@ -75,6 +134,9 @@
 .mainContainer__services__cardsContainer {
   background-image: url("../img/fondo_service.jpg");
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: auto;
   display: flex;
@@ -100,6 +162,11 @@
   display: grid;
   grid-template-rows: 2fr 1fr 3fr;
   box-shadow: 14px 14px 10px black, -4px -4px 10px black;
+  transition: transform 0.3s ease-in-out;
+}
+.mainContainer__services__cardsContainer__cardContainer__card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .mainContainer__services__cardsContainer__cardContainer__card__imgContainer {
   width: 100%;
@@ -151,6 +218,9 @@
 .mainContainer__contactContainer__contact {
   background-image: url("../img/fondo_contact3.jpg");
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   width: 100%;
   height: auto;
@@ -198,6 +268,14 @@
   border-top-left-radius: 10vh;
   border-bottom-right-radius: 10vh;
   box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+}
+.mainContainer__contactContainer__contact__info__myData__dataMobile {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 4vh 4vh;
+  border-top-left-radius: 10vh;
+  border-bottom-right-radius: 10vh;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+  display: none;
 }
 .mainContainer__contactContainer__contact__info__formContainer {
   width: 100%;
@@ -297,7 +375,7 @@
   background-color: white;
   color: black;
   cursor: pointer;
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 .headerContainer {
@@ -306,6 +384,10 @@
   background-image: url("../img/luna_eclipse.jpg");
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .headerContainer__headerMobile {
   display: none;
@@ -540,6 +622,19 @@
   }
 }
 @media (max-width: 480px) {
+  @keyframes slideInLeftSmall {
+    from {
+      transform: translateX(-20%); /* Menor desplazamiento en pantallas pequeñas */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .slide-in-left {
+    animation: slideInLeftSmall 1s ease-out forwards;
+  }
   .networksContainer {
     width: 100%;
     height: auto;
@@ -724,6 +819,10 @@
     border-top-left-radius: 10vh;
     border-bottom-right-radius: 10vh;
     box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+    display: none;
+  }
+  .mainContainer__contactContainer__contact__info__myData__dataMobile {
+    display: block;
   }
   .mainContainer__contactContainer__contact__info__formContainer {
     width: 100%;

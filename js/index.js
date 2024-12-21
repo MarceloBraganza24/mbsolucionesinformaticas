@@ -57,21 +57,27 @@ btnContactHeaderMobile.addEventListener('click', () => {
 let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  
+
     if (currentScroll > lastScrollTop) {
+
       header.style.top = '-18vh';
       header.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
       headerMobile.style.top = '-12vh';
       headerMobile.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
       document.getElementById('menuOptionsContainer').style.display = 'none';
+
     } else {
+
       header.style.top = '0';
       headerMobile.style.top = '0';
+
     }
 
     if (window.scrollY === 0) {
-        header.style.backgroundColor = "transparent";
-        headerMobile.style.backgroundColor = "transparent";
+
+      header.style.backgroundColor = "transparent";
+      headerMobile.style.backgroundColor = "transparent";
+
     }
   
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
@@ -84,3 +90,24 @@ document.getElementById('hmenu').addEventListener('click', function () {
       document.getElementById('menuOptionsContainer').style.display = 'none';
     }
 });
+
+// Selecciona los elementos que quieres animar
+const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+// Configura el observador
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Reinicia la animación eliminando y volviendo a agregar la clase
+      const animationType = entry.target.dataset.animation;
+      entry.target.classList.remove(animationType); // Elimina la clase
+      void entry.target.offsetWidth; // Fuerza un reflow para reiniciar la animación
+      entry.target.classList.add(animationType); // Vuelve a agregar la clase
+    }
+  });
+}, {
+  threshold: 0.1, // 10% del elemento visible para activar la animación
+});
+
+// Asocia el observador a cada elemento
+elementsToAnimate.forEach(element => observer.observe(element));

@@ -4,6 +4,10 @@
     background-image: url('../img/luna_eclipse.jpg');
     position: relative;
     overflow: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     &__headerMobile {
         display: none;
     }
