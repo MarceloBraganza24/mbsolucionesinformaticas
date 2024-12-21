@@ -86,7 +86,6 @@ window.addEventListener('scroll', () => {
 document.getElementById('hmenu').addEventListener('click', function () {
     if(document.getElementById('menuOptionsContainer').style.display == 'none') {
       document.getElementById('menuOptionsContainer').style.display = 'block';
-      document.getElementById('menuOptionsContainer').classList.toggle('open');
     } else {
       document.getElementById('menuOptionsContainer').style.display = 'none';
     }

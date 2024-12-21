@@ -522,13 +522,12 @@
     width: 100%;
     height: 100vh;
     background-image: url("../img/luna_eclipse_V.jpg");
-    background-size: contain;
+    background-size: cover;
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: black;
   }
   .headerContainer__header {
     display: none;
@@ -674,11 +673,12 @@
     width: 20%;
     height: auto;
     display: flex;
-    justify-self: end;
+    justify-content: end;
+    align-items: center;
   }
   .networksContainer__network__img {
     width: 80%;
-    padding-right: 5vh;
+    padding-right: 2vh;
     transition: transform 0.3s ease-in-out;
   }
   .networksContainer__network__img:hover {
@@ -803,7 +803,7 @@
   }
   .mainContainer__contactContainer__contact {
     background-image: url("../img/fondo_contact3V.jpg");
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -813,8 +813,6 @@
     display: flex;
     flex-direction: column;
     margin-top: 2vh;
-    background-color: black;
-    box-shadow: inset 0 8px 8px -6px rgba(0, 0, 0, 0.3);
   }
   .mainContainer__contactContainer__contact__titleContainer {
     width: 100%;
