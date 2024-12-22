@@ -3,13 +3,16 @@ const headerMobile = document.getElementById('headerMobile');
 
 const btnHomeHeader = document.getElementById('btnHomeHeader');
 const btnHomeHeaderMobile = document.getElementById('btnHomeHeaderMobile');
+const btnHomeFooter = document.getElementById('btnHomeFooter');
 
 const btnServicesHeader = document.getElementById('btnServicesHeader');
 const btnServicesHeaderMobile = document.getElementById('btnServicesHeaderMobile');
+const btnServicesFooter = document.getElementById('btnServicesFooter');
 const servicesSection = document.getElementById('servicesSection');
 
 const btnContactHeader = document.getElementById('btnContactHeader');
 const btnContactHeaderMobile = document.getElementById('btnContactHeaderMobile');
+const btnContactFooter = document.getElementById('btnContactFooter');
 const contactSection = document.getElementById('contactSection');
 
 btnHomeHeader.addEventListener('click', () => {
@@ -18,14 +21,19 @@ btnHomeHeader.addEventListener('click', () => {
       behavior: 'smooth' // Desplazamiento suave
     });
 });
-  btnHomeHeaderMobile.addEventListener('click', () => {
+btnHomeFooter.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Desplazamiento suave
+    });
+});
+btnHomeHeaderMobile.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth' // Desplazamiento suave
     });
     document.getElementById('menuOptionsContainer').style.display = 'none';
 });
-
 btnServicesHeader.addEventListener('click', () => {
     servicesSection.scrollIntoView({
       behavior: 'smooth', 
@@ -39,7 +47,12 @@ btnServicesHeaderMobile.addEventListener('click', () => {
     });
     document.getElementById('menuOptionsContainer').style.display = 'none';
 });
-
+btnServicesFooter.addEventListener('click', () => {
+    servicesSection.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start' 
+    });
+});
 btnContactHeader.addEventListener('click', () => {
     contactSection.scrollIntoView({
       behavior: 'smooth', 
@@ -53,7 +66,12 @@ btnContactHeaderMobile.addEventListener('click', () => {
     });
     document.getElementById('menuOptionsContainer').style.display = 'none';
 });
-
+btnContactFooter.addEventListener('click', () => {
+    contactSection.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start' 
+    });
+});
 let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;

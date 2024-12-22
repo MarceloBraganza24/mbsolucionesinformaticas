@@ -435,6 +435,7 @@
 }
 
 @import "header";
+@import "footer";
 
 @media (max-width: 480px) {
 
@@ -609,6 +610,7 @@
                 background-image: url('../img/fondo_contact3V.jpg');
                 background-size: cover;
                 //background-size: cover;
+                background-attachment: scroll;
                 overflow: hidden;
                 width: 100%;
                 height: auto;

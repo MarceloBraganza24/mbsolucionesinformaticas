@@ -1,0 +1,163 @@
+.footer {
+    background-color: #ccc;
+    width: 100%;
+    height: auto;
+    //padding: 5vh 0vh;
+    display: flex;
+    flex-direction: column;
+    &__dataContainer {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 2/3;
+        &__data {
+            //background-color: salmon;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column: 2/3;
+            padding: 8vh 0vh;
+            &__nav {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                border-right: 0.3vh solid black;
+                gap: 2vh;
+                &__item {
+                    width: 100%;
+                    height: auto;
+                    font-size: 16px;
+                    &:hover {
+                        cursor: pointer;
+                        color: whitesmoke;
+                    }
+                }
+            }
+            &__networks {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 1vh;
+                &__item {
+                    width: 100%;
+                    height: auto;
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+                    &__logoContainer {
+                        width: 100%;
+                        height: auto;
+                        @include disFC;
+                        &__logo {
+                            width: 40%;
+                        }
+                    }
+                    &__network {
+                        width: 100%;
+                        height: auto;
+                        @include disFC;
+                        &__prop {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__copyrightContainer {
+        width: 100%;
+        height: auto;
+        @include disFC;
+        padding: 1vh 0vh;
+        &__copyright {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+.footer {
+    background-color: #ccc;
+    width: 100%;
+    height: auto;
+    //padding: 5vh 0vh;
+    display: flex;
+    flex-direction: column;
+    &__dataContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        //grid-column: 2/3;
+        &__data {
+            //background-color: salmon;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            //grid-column: 2/3;
+            padding: 8vh 0vh;
+            &__nav {
+                width: 100%;
+                height: auto;
+                @include disFC;
+                flex-direction: column;
+                text-align: center;
+                border-right: 0.3vh solid black;
+                gap: 2vh;
+                &__item {
+                    width: 100%;
+                    height: auto;
+                    font-size: 12px;
+                    &:hover {
+                        cursor: pointer;
+                        color: whitesmoke;
+                    }
+                }
+            }
+            &__networks {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 1vh;
+                &__item {
+                    width: 100%;
+                    height: auto;
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+                    &__logoContainer {
+                        width: 100%;
+                        height: auto;
+                        @include disFC;
+                        &__logo {
+                            width: 50%;
+                        }
+                    }
+                    &__network {
+                        width: 100%;
+                        height: auto;
+                        @include disFC;
+                        font-size: 12px;
+                        &__prop {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__copyrightContainer {
+        width: 100%;
+        height: auto;
+        @include disFC;
+        padding: 1vh 0vh;
+        &__copyright {
+            font-size: 8px;
+        }
+    }
+}
+}
