@@ -1,3 +1,78 @@
+// Inicializar EmailJS con tu User ID
+emailjs.init('EayN_WhMM0ojL_olQ'); // Reemplaza con tu User ID de EmailJS
+//emailjs.init('3EsGxzFJtiB3fdytUPGTk'); // Reemplaza con tu User ID de EmailJS
+const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm').value;
+const inputLastNameContactForm = document.getElementById('inputLastNameContactForm').value;
+const inputEmailContactForm = document.getElementById('inputEmailContactForm').value;
+const inputPhoneContactForm = document.getElementById('inputPhoneContactForm').value;
+const inputTextAreaContactForm = document.getElementById('inputTextAreaContactForm').value;
+//console.log(`${inputFirstNameContactForm}`)
+
+
+document.getElementById("btnSubmitContactForm").addEventListener("click", () => {
+  const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm').value;
+  const inputLastNameContactForm = document.getElementById('inputLastNameContactForm').value;
+  const inputEmailContactForm = document.getElementById('inputEmailContactForm').value;
+  const inputPhoneContactForm = document.getElementById('inputPhoneContactForm').value;
+  const inputTextAreaContactForm = document.getElementById('inputTextAreaContactForm').value;
+
+  // console.log("Valores del formulario:");
+  // console.log("Nombre:", inputFirstNameContactForm);
+  // console.log("Apellido:", inputLastNameContactForm);
+  // console.log("Email:", inputEmailContactForm);
+  // console.log("Teléfono:", inputPhoneContactForm);
+  // console.log("Mensaje:", inputTextAreaContactForm);
+  if(inputFirstNameContactForm == '' || inputLastNameContactForm == '' || inputEmailContactForm == '' || inputPhoneContactForm == '' || inputTextAreaContactForm == '') {
+    alert('¡Debes completar todos los campos!');
+  } else {
+    emailjs.send('service_yx7qyog', 'template_43m480h', {
+      nombre: inputFirstNameContactForm,
+      apellido: inputLastNameContactForm,
+      email: inputEmailContactForm,
+      telefono: inputPhoneContactForm,
+      mensaje: inputTextAreaContactForm
+    })
+    .then(function(response) {
+      console.log('Mensaje enviado:', response);
+      alert('¡Tu mensaje ha sido enviado correctamente!');
+    }, function(error) {
+      console.log('Error al enviar el mensaje:', error);
+      alert('Hubo un problema al enviar tu mensaje. Intenta nuevamente.');
+    });
+  }
+
+
+});
+
+// Obtener el formulario y agregar el evento de envío
+// document.getElementById('contact-form').addEventListener('submit', function (event) {
+//   event.preventDefault(); // Evitar el comportamiento predeterminado de recargar la página
+
+//   // Obtener los valores del formulario
+//   const nombre = document.getElementById('nombre').value;
+//   const apellido = document.getElementById('apellido').value;
+//   const email = document.getElementById('email').value;
+//   const telefono = document.getElementById('telefono').value;
+//   const mensaje = document.getElementById('mensaje').value;
+
+//   // Usar EmailJS para enviar el correo
+//   emailjs.send('tu_service_id', 'tu_template_id', {
+//     nombre: nombre,
+//     apellido: apellido,
+//     email: email,
+//     telefono: telefono,
+//     mensaje: mensaje
+//   })
+//   .then(function(response) {
+//     console.log('Mensaje enviado:', response);
+//     alert('¡Tu mensaje ha sido enviado correctamente!');
+//   }, function(error) {
+//     console.log('Error al enviar el mensaje:', error);
+//     alert('Hubo un problema al enviar tu mensaje. Intenta nuevamente.');
+//   });
+// });
+
+
 const header = document.getElementById('header');
 const headerMobile = document.getElementById('headerMobile');
 
