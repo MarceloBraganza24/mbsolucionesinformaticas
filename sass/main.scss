@@ -133,6 +133,7 @@
 } */
 
 .mainContainer {
+    background-color: #ccc;
     width: 100%;
     height: auto;
     display: flex;
@@ -143,11 +144,13 @@
         height: auto;
         @include disFC();
         &__separatorService {
-            background-color: #ccc;
+            background-color: #231b72;
             width: 40%;
             height: 2vh;
             border-bottom-right-radius: 20vh;
             border-bottom-left-radius: 20vh;
+            box-shadow: 10px 10px 10px black, -4px -4px 10px black;
+
         }
     }
     &__services {

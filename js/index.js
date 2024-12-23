@@ -1,10 +1,28 @@
 emailjs.init('EayN_WhMM0ojL_olQ'); // Reemplaza con tu User ID de EmailJS
 
-const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm').value;
-const inputLastNameContactForm = document.getElementById('inputLastNameContactForm').value;
-const inputEmailContactForm = document.getElementById('inputEmailContactForm').value;
-const inputPhoneContactForm = document.getElementById('inputPhoneContactForm').value;
-const inputTextAreaContactForm = document.getElementById('inputTextAreaContactForm').value;
+const inputPhoneContactForm = document.getElementById('inputPhoneContactForm');
+inputPhoneContactForm.addEventListener('input', (event) => {
+  const value = event.target.value;
+  event.target.value = value.replace(/[^0-9]/g, '');
+});
+const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm');
+    inputFirstNameContactForm.addEventListener('input', (event) => {
+    const regex = /^[a-zA-Z]*$/;
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      event.target.value = value.replace(/[^a-zA-Z]/g, '');
+    }
+});
+const inputLastNameContactForm = document.getElementById('inputLastNameContactForm');
+inputLastNameContactForm.addEventListener('input', (event) => {
+    const regex = /^[a-zA-Z]*$/;
+    const value = event.target.value;
+    if (!regex.test(value)) {
+        event.target.value = value.replace(/[^a-zA-Z]/g, '');
+    }
+});
+const inputEmailContactForm = document.getElementById('inputEmailContactForm');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 document.getElementById("btnSubmitContactForm").addEventListener("click", () => {
 
@@ -16,6 +34,8 @@ document.getElementById("btnSubmitContactForm").addEventListener("click", () => 
 
     if(inputFirstNameContactForm == '' || inputLastNameContactForm == '' || inputEmailContactForm == '' || inputPhoneContactForm == '' || inputTextAreaContactForm == '') {
         alert('¡Debes completar todos los campos!');
+    } else if (inputEmailContactForm && !emailRegex.test(inputEmailContactForm)) {
+          alert('El formato del correo no es válido, ingrese otro');
     } else {
         emailjs.send('service_yx7qyog', 'template_43m480h', {
             first_name: inputFirstNameContactForm,
@@ -87,7 +107,6 @@ btnServicesHeaderMobile.addEventListener('click', () => {
       behavior: 'smooth', 
       block: 'start' 
     });
-    //document.getElementById('menuOptionsContainer').style.display = 'none';
 });
 btnServicesFooter.addEventListener('click', () => {
     servicesSection.scrollIntoView({
@@ -106,7 +125,6 @@ btnContactHeaderMobile.addEventListener('click', () => {
       behavior: 'smooth', 
       block: 'start' 
     });
-    //document.getElementById('menuOptionsContainer').style.display = 'none';
 });
 btnContactFooter.addEventListener('click', () => {
     contactSection.scrollIntoView({
@@ -124,11 +142,9 @@ window.addEventListener('scroll', () => {
       header.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
       headerMobile.style.top = '-12vh';
       headerMobile.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
-      //document.getElementById('menuOptionsContainer').style.display = 'none';
       
     } else {
         
-        //document.getElementById('menuOptionsContainer').style.display = 'block'; 
         header.style.top = '0';
         headerMobile.style.top = '0';
         
@@ -136,7 +152,6 @@ window.addEventListener('scroll', () => {
     
     if (window.scrollY === 0) {
         
-        //document.getElementById('menuOptionsContainer').style.display = 'none'; 
       header.style.backgroundColor = "transparent";
       headerMobile.style.backgroundColor = "transparent";
 
@@ -148,31 +163,6 @@ window.addEventListener('scroll', () => {
 document.getElementById('logoWhatsapp').addEventListener('click', function () {
   window.open("https://wa.me/5492926459172", "_blank");
 });
-//const menuOptionsContainer = document.getElementById('menuOptionsContainer');
-
-/* document.getElementById('hmenu').addEventListener('click', () => {
-    //menuOptionsContainer.classList.toggle('active');
-    if (document.getElementById('menuOptionsContainer').style.display == 'none') {
-        document.getElementById('menuOptionsContainer').style.display == 'block'
-        menuOptionsContainer.classList.toggle('active');
-        } else {
-            document.getElementById('menuOptionsContainer').style.display == 'none'
-    }
-
-   //menuOptionsContainer.classList.toggle('active');
-
-}); */
-
-/* document.getElementById('hmenu').addEventListener('click', function () {
-    // console.log('menu burguer')
-    // menuOptionsContainer.classList.toggle('active');
-    if(document.getElementById('menuOptionsContainer').style.display == 'none') {
-      document.getElementById('menuOptionsContainer').style.display = 'block';
-    } else {
-      document.getElementById('menuOptionsContainer').style.display = 'none';
-    }
-
-}); */
 
 // Selecciona los elementos que quieres animar
 const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
@@ -194,11 +184,6 @@ const observer = new IntersectionObserver((entries) => {
 
 // Asocia el observador a cada elemento
 elementsToAnimate.forEach(element => observer.observe(element));
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const hmenu = document.getElementById('hmenu');
@@ -225,30 +210,3 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-
-
-/* const hmenu = document.getElementById('hmenu');
-const menuOptionsContainer = document.getElementById('menuOptionsContainer');
-let disableScroll = false;
-let isVisible = false;
-
-hmenu.addEventListener('click', () => {
-  isVisible = !isVisible;
-  if (isVisible) {
-    menuOptionsContainer.classList.add('active');
-    disableScroll = true; // Deshabilita el scroll temporalmente
-    setTimeout(() => (disableScroll = false), 500); // Reactiva después de la animación
-  } else {
-    menuOptionsContainer.classList.remove('active');
-  }
-});
-
-window.addEventListener('scroll', () => {
-  if (!disableScroll && isVisible) {
-    menuOptionsContainer.classList.remove('active');
-    isVisible = false;
-  }
-}); */
-
-  

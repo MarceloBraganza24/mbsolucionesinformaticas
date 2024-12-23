@@ -129,6 +129,7 @@
     }
 } */
 .mainContainer {
+  background-color: #ccc;
   width: 100%;
   height: auto;
   display: flex;
@@ -143,11 +144,12 @@
   align-items: center;
 }
 .mainContainer__separatorContainer__separatorService {
-  background-color: #ccc;
+  background-color: #231b72;
   width: 40%;
   height: 2vh;
   border-bottom-right-radius: 20vh;
   border-bottom-left-radius: 20vh;
+  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .mainContainer__services {
   width: 100%;
@@ -531,7 +533,7 @@
   bottom: 0;
 }
 .headerContainer__separatorHomeContainer__separatorHome {
-  background-color: #ccc;
+  background-color: #231b72;
   width: 40%;
   height: 2vh;
   border-top-right-radius: 20vh;
@@ -648,7 +650,7 @@
     height: auto;
     position: fixed;
     top: 12vh;
-    right: -400px;
+    right: -1000px;
     display: block;
     border-top-left-radius: 20%;
     z-index: 1;
