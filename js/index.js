@@ -1,77 +1,44 @@
-// Inicializar EmailJS con tu User ID
 emailjs.init('EayN_WhMM0ojL_olQ'); // Reemplaza con tu User ID de EmailJS
-//emailjs.init('3EsGxzFJtiB3fdytUPGTk'); // Reemplaza con tu User ID de EmailJS
+
 const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm').value;
 const inputLastNameContactForm = document.getElementById('inputLastNameContactForm').value;
 const inputEmailContactForm = document.getElementById('inputEmailContactForm').value;
 const inputPhoneContactForm = document.getElementById('inputPhoneContactForm').value;
 const inputTextAreaContactForm = document.getElementById('inputTextAreaContactForm').value;
-//console.log(`${inputFirstNameContactForm}`)
-
 
 document.getElementById("btnSubmitContactForm").addEventListener("click", () => {
-  const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm').value;
-  const inputLastNameContactForm = document.getElementById('inputLastNameContactForm').value;
-  const inputEmailContactForm = document.getElementById('inputEmailContactForm').value;
-  const inputPhoneContactForm = document.getElementById('inputPhoneContactForm').value;
-  const inputTextAreaContactForm = document.getElementById('inputTextAreaContactForm').value;
 
-  // console.log("Valores del formulario:");
-  // console.log("Nombre:", inputFirstNameContactForm);
-  // console.log("Apellido:", inputLastNameContactForm);
-  // console.log("Email:", inputEmailContactForm);
-  // console.log("Teléfono:", inputPhoneContactForm);
-  // console.log("Mensaje:", inputTextAreaContactForm);
-  if(inputFirstNameContactForm == '' || inputLastNameContactForm == '' || inputEmailContactForm == '' || inputPhoneContactForm == '' || inputTextAreaContactForm == '') {
-    alert('¡Debes completar todos los campos!');
-  } else {
-    emailjs.send('service_yx7qyog', 'template_43m480h', {
-      nombre: inputFirstNameContactForm,
-      apellido: inputLastNameContactForm,
-      email: inputEmailContactForm,
-      telefono: inputPhoneContactForm,
-      mensaje: inputTextAreaContactForm
-    })
-    .then(function(response) {
-      console.log('Mensaje enviado:', response);
-      alert('¡Tu mensaje ha sido enviado correctamente!');
-    }, function(error) {
-      console.log('Error al enviar el mensaje:', error);
-      alert('Hubo un problema al enviar tu mensaje. Intenta nuevamente.');
-    });
-  }
+    const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm').value;
+    const inputLastNameContactForm = document.getElementById('inputLastNameContactForm').value;
+    const inputEmailContactForm = document.getElementById('inputEmailContactForm').value;
+    const inputPhoneContactForm = document.getElementById('inputPhoneContactForm').value;
+    const inputTextAreaContactForm = document.getElementById('inputTextAreaContactForm').value;
 
+    if(inputFirstNameContactForm == '' || inputLastNameContactForm == '' || inputEmailContactForm == '' || inputPhoneContactForm == '' || inputTextAreaContactForm == '') {
+        alert('¡Debes completar todos los campos!');
+    } else {
+        emailjs.send('service_yx7qyog', 'template_43m480h', {
+            first_name: inputFirstNameContactForm,
+            last_name: inputLastNameContactForm,
+            email: inputEmailContactForm,
+            phone: inputPhoneContactForm,
+            message: inputTextAreaContactForm
+        })
+        .then(function(response) {
+            console.log('Mensaje enviado:', response);
+            document.getElementById('inputFirstNameContactForm').value = '';
+            document.getElementById('inputLastNameContactForm').value = '';
+            document.getElementById('inputEmailContactForm').value = '';
+            document.getElementById('inputPhoneContactForm').value = '';
+            document.getElementById('inputTextAreaContactForm').value = '';
+            alert('¡Tu mensaje ha sido enviado correctamente!');
+        }, function(error) {
+            console.log('Error al enviar el mensaje:', error);
+            alert('Hubo un problema al enviar tu mensaje. Intenta nuevamente.');
+        });
+    }
 
 });
-
-// Obtener el formulario y agregar el evento de envío
-// document.getElementById('contact-form').addEventListener('submit', function (event) {
-//   event.preventDefault(); // Evitar el comportamiento predeterminado de recargar la página
-
-//   // Obtener los valores del formulario
-//   const nombre = document.getElementById('nombre').value;
-//   const apellido = document.getElementById('apellido').value;
-//   const email = document.getElementById('email').value;
-//   const telefono = document.getElementById('telefono').value;
-//   const mensaje = document.getElementById('mensaje').value;
-
-//   // Usar EmailJS para enviar el correo
-//   emailjs.send('tu_service_id', 'tu_template_id', {
-//     nombre: nombre,
-//     apellido: apellido,
-//     email: email,
-//     telefono: telefono,
-//     mensaje: mensaje
-//   })
-//   .then(function(response) {
-//     console.log('Mensaje enviado:', response);
-//     alert('¡Tu mensaje ha sido enviado correctamente!');
-//   }, function(error) {
-//     console.log('Error al enviar el mensaje:', error);
-//     alert('Hubo un problema al enviar tu mensaje. Intenta nuevamente.');
-//   });
-// });
-
 
 const header = document.getElementById('header');
 const headerMobile = document.getElementById('headerMobile');
@@ -107,7 +74,7 @@ btnHomeHeaderMobile.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth' // Desplazamiento suave
     });
-    document.getElementById('menuOptionsContainer').style.display = 'none';
+    //document.getElementById('menuOptionsContainer').style.display = 'none';
 });
 btnServicesHeader.addEventListener('click', () => {
     servicesSection.scrollIntoView({
@@ -120,7 +87,7 @@ btnServicesHeaderMobile.addEventListener('click', () => {
       behavior: 'smooth', 
       block: 'start' 
     });
-    document.getElementById('menuOptionsContainer').style.display = 'none';
+    //document.getElementById('menuOptionsContainer').style.display = 'none';
 });
 btnServicesFooter.addEventListener('click', () => {
     servicesSection.scrollIntoView({
@@ -139,7 +106,7 @@ btnContactHeaderMobile.addEventListener('click', () => {
       behavior: 'smooth', 
       block: 'start' 
     });
-    document.getElementById('menuOptionsContainer').style.display = 'none';
+    //document.getElementById('menuOptionsContainer').style.display = 'none';
 });
 btnContactFooter.addEventListener('click', () => {
     contactSection.scrollIntoView({
@@ -157,17 +124,19 @@ window.addEventListener('scroll', () => {
       header.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
       headerMobile.style.top = '-12vh';
       headerMobile.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
-      document.getElementById('menuOptionsContainer').style.display = 'none';
-
+      //document.getElementById('menuOptionsContainer').style.display = 'none';
+      
     } else {
-
-      header.style.top = '0';
-      headerMobile.style.top = '0';
-
+        
+        //document.getElementById('menuOptionsContainer').style.display = 'block'; 
+        header.style.top = '0';
+        headerMobile.style.top = '0';
+        
     }
-
+    
     if (window.scrollY === 0) {
-
+        
+        //document.getElementById('menuOptionsContainer').style.display = 'none'; 
       header.style.backgroundColor = "transparent";
       headerMobile.style.backgroundColor = "transparent";
 
@@ -179,14 +148,31 @@ window.addEventListener('scroll', () => {
 document.getElementById('logoWhatsapp').addEventListener('click', function () {
   window.open("https://wa.me/5492926459172", "_blank");
 });
+//const menuOptionsContainer = document.getElementById('menuOptionsContainer');
 
-document.getElementById('hmenu').addEventListener('click', function () {
+/* document.getElementById('hmenu').addEventListener('click', () => {
+    //menuOptionsContainer.classList.toggle('active');
+    if (document.getElementById('menuOptionsContainer').style.display == 'none') {
+        document.getElementById('menuOptionsContainer').style.display == 'block'
+        menuOptionsContainer.classList.toggle('active');
+        } else {
+            document.getElementById('menuOptionsContainer').style.display == 'none'
+    }
+
+   //menuOptionsContainer.classList.toggle('active');
+
+}); */
+
+/* document.getElementById('hmenu').addEventListener('click', function () {
+    // console.log('menu burguer')
+    // menuOptionsContainer.classList.toggle('active');
     if(document.getElementById('menuOptionsContainer').style.display == 'none') {
       document.getElementById('menuOptionsContainer').style.display = 'block';
     } else {
       document.getElementById('menuOptionsContainer').style.display = 'none';
     }
-});
+
+}); */
 
 // Selecciona los elementos que quieres animar
 const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
@@ -208,3 +194,61 @@ const observer = new IntersectionObserver((entries) => {
 
 // Asocia el observador a cada elemento
 elementsToAnimate.forEach(element => observer.observe(element));
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hmenu = document.getElementById('hmenu');
+    const menuOptionsContainer = document.getElementById('menuOptionsContainer');
+  
+    // Variable para rastrear si el div está activo
+    let isActive = false;
+  
+    // Evento para mostrar/ocultar el div al presionar el botón
+    hmenu.addEventListener('click', () => {
+      isActive = !isActive;
+      if (isActive) {
+        menuOptionsContainer.classList.add('active');
+      } else {
+        menuOptionsContainer.classList.remove('active');
+      }
+    });
+  
+    // Evento para ocultar el div al hacer scroll
+    window.addEventListener('scroll', () => {
+      if (isActive) {
+        menuOptionsContainer.classList.remove('active');
+        isActive = false; // Actualiza el estado
+      }
+    });
+  });
+
+
+
+/* const hmenu = document.getElementById('hmenu');
+const menuOptionsContainer = document.getElementById('menuOptionsContainer');
+let disableScroll = false;
+let isVisible = false;
+
+hmenu.addEventListener('click', () => {
+  isVisible = !isVisible;
+  if (isVisible) {
+    menuOptionsContainer.classList.add('active');
+    disableScroll = true; // Deshabilita el scroll temporalmente
+    setTimeout(() => (disableScroll = false), 500); // Reactiva después de la animación
+  } else {
+    menuOptionsContainer.classList.remove('active');
+  }
+});
+
+window.addEventListener('scroll', () => {
+  if (!disableScroll && isVisible) {
+    menuOptionsContainer.classList.remove('active');
+    isVisible = false;
+  }
+}); */
+
+  

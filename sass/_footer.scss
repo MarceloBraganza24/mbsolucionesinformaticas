@@ -2,7 +2,6 @@
     background-color: #ccc;
     width: 100%;
     height: auto;
-    //padding: 5vh 0vh;
     display: flex;
     flex-direction: column;
     &__dataContainer {
@@ -10,14 +9,12 @@
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column: 2/3;
         &__data {
-            //background-color: salmon;
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-column: 2/3;
-            padding: 8vh 0vh;
+            grid-column: 1/2;
+            padding: 10vh 0vh;
             &__nav {
                 width: 100%;
                 height: auto;
@@ -29,10 +26,17 @@
                 &__item {
                     width: 100%;
                     height: auto;
-                    font-size: 16px;
-                    &:hover {
+                    @include disFC;
+                    &__prop {
+                        //background-color: saddlebrown;
+                        font-size: 14px;
+                        //display: inline-block;
                         cursor: pointer;
-                        color: whitesmoke;
+                        //transition: all ;
+                        &:hover {
+                            color: whitesmoke;
+
+                        }
                     }
                 }
             }
@@ -60,6 +64,7 @@
                         width: 100%;
                         height: auto;
                         @include disFC;
+                        font-size: 15px;
                         &__prop {
                             width: 100%;
                         }
@@ -74,7 +79,7 @@
         @include disFC;
         padding: 1vh 0vh;
         &__copyright {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 }
@@ -110,10 +115,8 @@
                 &__item {
                     width: 100%;
                     height: auto;
-                    font-size: 12px;
-                    &:hover {
-                        cursor: pointer;
-                        color: whitesmoke;
+                    &__prop {
+                        font-size: 12px;
                     }
                 }
             }

@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="networksContainer">
+    <!-- <div class="networksContainer">
 
         <div class="networksContainer__networkContainer">
 
@@ -28,7 +28,11 @@
 
         </div>
         
-    </div>
+    </div> -->
+
+    <a class="networksContainer">
+        <img id="logoWhatsapp" class="networksContainer__network" src="img/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
     
     <header class="headerContainer">
         
@@ -74,16 +78,7 @@
 
         </div>
 
-        <div id="menuOptionsContainer" class="menuOptionsContainer">
-
-            <div class="menuOptionsContainer__menuOptions">
-                <div id="btnHomeHeaderMobile" class="menuOptionsContainer__menuOptions__item">- HOME</div>
-                <div id="btnServicesHeaderMobile" class="menuOptionsContainer__menuOptions__item">- SERVICIOS</div>
-                <div id="btnContactHeaderMobile" class="menuOptionsContainer__menuOptions__item">- CONTACTO</div>
-            </div>
-
-        </div>
-
+        
         
         <div class="headerContainer__homeContainer">
             
@@ -98,6 +93,16 @@
         </div>
         
     </header>
+    
+    <div id="menuOptionsContainer" class="menuOptionsContainer">
+
+        <div class="menuOptionsContainer__menuOptions">
+            <div id="btnHomeHeaderMobile" class="menuOptionsContainer__menuOptions__item">- HOME</div>
+            <div id="btnServicesHeaderMobile" class="menuOptionsContainer__menuOptions__item">- SERVICIOS</div>
+            <div id="btnContactHeaderMobile" class="menuOptionsContainer__menuOptions__item">- CONTACTO</div>
+        </div>
+
+    </div>
 
     <main class="mainContainer">
 
@@ -370,9 +375,15 @@
             <div class="footer__dataContainer__data">
                 
                 <div class="footer__dataContainer__data__nav">
-                    <div id="btnHomeFooter" class="footer__dataContainer__data__nav__item">HOME</div>
-                    <div id="btnServicesFooter" class="footer__dataContainer__data__nav__item">SERVICIOS</div>
-                    <div id="btnContactFooter" class="footer__dataContainer__data__nav__item">CONTACTO</div>
+                    <div class="footer__dataContainer__data__nav__item">
+                        <div id="btnHomeFooter" class="footer__dataContainer__data__nav__item__prop">HOME</div>
+                    </div>
+                    <div class="footer__dataContainer__data__nav__item">
+                        <div id="btnServicesFooter" class="footer__dataContainer__data__nav__item__prop">SERVICIOS</div>
+                    </div>
+                    <div class="footer__dataContainer__data__nav__item">
+                        <div id="btnContactFooter" class="footer__dataContainer__data__nav__item__prop">CONTACTO</div>
+                    </div>
                 </div>
 
                 <div class="footer__dataContainer__data__networks">
